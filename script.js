@@ -6,7 +6,8 @@
       pneumonia: 'https://sebukpor.github.io/pneumonia/',
       heart: 'https://sebukpor.github.io/heart-diseases-prediction/',
       breast: 'https://sebukpor.github.io/breast-cancer-classification/',
-      malaria: 'https://sebukpor.github.io/malaria-classification/'
+      malaria: 'https://sebukpor.github.io/malaria-classification/',
+      dialarge: 'https://sebukpor.github.io/Diabetes-large-input/'
       // Add more model URLs if needed
     };
 
