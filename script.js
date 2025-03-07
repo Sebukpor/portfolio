@@ -7,7 +7,8 @@
       heart: 'https://sebukpor.github.io/heart-diseases-prediction/',
       breast: 'https://sebukpor.github.io/breast-cancer-classification/',
       malaria: 'https://sebukpor.github.io/malaria-classification/',
-      dialarge: 'https://sebukpor.github.io/Diabetes-large-input/'
+      dialarge: 'https://sebukpor.github.io/Diabetes-large-input/',
+      dia18: 'https://sebukpor.github.io/diabetes-18/'
       // Add more model URLs if needed
     };
 
