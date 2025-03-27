@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Font Awesome for icons -->
+    <title>Divine Sebukpor | Healthcare AI Portfolio</title>
+    <style>
+        /* Global Styles */
+        :root {
+    --primary: #035255;  /* Deep Teal */
+    --secondary: #28b384;  /* Soft Mint */
+    --accent: #EE9B00;  /* Warm Orange */
+    --light: #FAF3E0;  /* Creamy White */
+    --dark: #3D405B;  /* Muted Dark Blue */
+    --neutral-gray: #B8B8B8;  /* Soft Gray */
+}
+
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 60px;
+            background-color: var(--secondary);
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(4, 146, 92, 0.8), rgba(14, 13, 13, 0.8)), url('/api/placeholder/1200/800') center/cover no-repeat;
+            color: white;
+            text-align: left;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            color: var(--accent);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .hero-btns .btn {
+            margin-right: 1rem;
+        }
+        
+        /* About Section */
+        #about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .about-img {
+            flex: 1;
+        }
+        
+        .about-img img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Models Section */
+        #models {
+            background-color: var(--light);
+        }
+        
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .model-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.model-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.model-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.model-info {
+    padding: 1.5rem;
+}
+
+.model-info h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.model-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Improved Accuracy Bar */
+.accuracy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.accuracy-bar {
+    flex: 1;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 10px;
+    position: relative;
+}
+
+.accuracy-fill {
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(90deg, var(--accent), var(--secondary));
+    transition: width 0.5s ease;
+}
+
+        /* DAS MedHub Section */
+        #medhub {
+            background-color: white;
+        }
+        
+        .medhub-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .medhub-img {
+            text-align: center;
+        }
+        
+        .medhub-img img {
+            height: 370px;
+            width: 700px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .medhub-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .medhub-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--accent);
+        }
+        
+        .feature-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Ambassador Section */
+        #ambassador {
+            background-color: var(--light);
+        }
+        
+        .ambassador-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .ambassador-text {
+            order: 1;
+        }
+        
+        .ambassador-img {
+            order: 2;
+            text-align: center;
+        }
+        
+        .ambassador-img img {
+            height: 170px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .ambassador-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .role-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        
+        .role-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        
+        .role-list li:before {
+            content: '✓';
+            display: inline-block;
+            margin-right: 0.8rem;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Contact Section */
+        #contact {
+            background-color: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: none;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content, 
+            .medhub-content, 
+            .ambassador-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .ambassador-text {
+                order: 2;
+            }
+            
+            .ambassador-img {
+                order: 1;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background-color: var(--primary);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: var(--shadow);
+                padding: 2rem 0;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 1.5rem 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .mobile-menu.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            
+            .mobile-menu.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .mobile-menu.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.3rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        
+        <nav class="container">
+            <a href="#" class="logo">Divine Sebukpor</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#models">AI Models</a></li>
+                <li><a href="#medhub">DAS medhub</a></li>
+                <li><a href="#ambassador">Ambassador</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Healthcare AI Solutions for a Better Tomorrow</h1>
+                <h2>Founder of DAS medhub | AI Engineer | Extern Ambassador</h2>
+                <p>Developing cutting-edge AI models for healthcare diagnostics and building innovative solutions to improve patient care and medical accessibility.</p>
+                <div class="hero-btns">
+                    <a href="#models" class="btn">Explore My Models</a>
+                    <a href="#contact" class="btn" style="background-color: transparent; border: 2px solid white;">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="images/me.png" alt="Your Profile">
+                </div>
+                <div class="about-text">
+                    <h3>Passionate About Healthcare Innovation</h3>
+                    <p>I am an AI Engineer specializing in healthcare applications with expertise in developing machine learning models for medical diagnosis. My work focuses on creating accurate, reliable, and accessible diagnostic tools for conditions like diabetes, pneumonia, tuberculosis, and malaria.</p>
+                    <p>As the founder of DAS medhub, I lead a healthtech startup dedicated to bridging the gap between cutting-edge AI technology and everyday healthcare needs. Our mission is to make quality healthcare accessible to all through innovative technology solutions.</p>
+                    <p>In my role as an Extern Ambassador, I collaborate with healthcare institutions, research organizations, and technology partners to foster innovation and drive meaningful change in the healthcare sector.</p>
+                    <a href="#contact" class="btn">Connect With Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Section -->
+    <section id="models">
+        <div class="container">
+            <h2 class="section-title">AI Diagnostic Models</h2>
+            <div class="models-grid">
+                <!-- Diabetes Model -->
+                <div class="model-card">
+                    <div class="model-img">
+                        <img src="images/R.jpeg" alt="Diabetes Prediction Model">
+                    </div>
+                    <div class="model-info">
+                        <h3>Diabetes Prediction</h3>
+                        <p>An AI model that predicts diabetes risk based on patient medical data with high accuracy.</p>
+                        <div class="accuracy">
+                            <span>Accuracy:</span>
+                            <div class="accuracy-bar">
+                                <div class="accuracy-fill" style="width: 96%"></div>
+                            </div>
+                            <span>96%</span>
+                        </div>
+                        <a href="https://das-medhub.github.io/models/" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <!-- Pneumonia Model -->
+                <div class="model-card">
+                    <div class="model-img">
+                        <img src="images/OIP (1).jpeg" alt="Pneumonia Detection Model">
+                    </div>
+                    <div class="model-info">
+                        <h3>Pneumonia Detection</h3>
+                        <p>A convolutional neural network that identifies pneumonia from chest X-rays with high precision.</p>
+                        <div class="accuracy">
+                            <span>Accuracy:</span>
+                            <div class="accuracy-bar">
+                                <div class="accuracy-fill" style="width: 96%"></div>
+                            </div>
+                            <span>96%</span>
+                        </div>
+                        <a href="https://das-medhub.github.io/models/" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Tuberculosis Model -->
+                <div class="model-card">
+                    <div class="model-img">
+                        <img src="images/OIP.jpeg" alt="Tuberculosis Screening Model">
+                    </div>
+                    <div class="model-info">
+                        <h3>Tuberculosis Screening</h3>
+                        <p>An advanced image recognition system for early detection of tuberculosis from medical scans.</p>
+                        <div class="accuracy">
+                            <span>Accuracy:</span>
+                            <div class="accuracy-bar">
+                                <div class="accuracy-fill" style="width: 95%"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                        <a href="https://das-medhub.github.io/models/" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Malaria Model -->
+                <div class="model-card">
+                    <div class="model-img">
+                        <img src="images/R (1).jpeg" alt="Malaria Detection Model">
+                    </div>
+                    <div class="model-info">
+                        <h3>Malaria Detection</h3>
+                        <p>A deep learning model that analyzes blood smear images to detect malaria parasites accurately.</p>
+                        <div class="accuracy">
+                            <span>Accuracy:</span>
+                            <div class="accuracy-bar">
+                                <div class="accuracy-fill" style="width: 97%"></div>
+                            </div>
+                            <span>97%</span>
+                        </div>
+                        <a href="https://das-medhub.github.io/models/" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <!-- Symptoms Assesment Model -->
+                <div class="model-card">
+                    <div class="model-img">
+                        <img src="images/image-removebg-preview.png" alt="Symptoms Assesment Model">
+                    </div>
+                    <div class="model-info">
+                        <h3>Symptoms Assesment Model(Rose)</h3>
+                        <p>Rose is an AI-powered virtual assistant that helps users assess symptoms, receive preliminary health guidance, and make informed healthcare decisions through a conversational interface. </p>
+                        <div class="accuracy">
+                            <span>Accuracy:</span>
+                            <div class="accuracy-bar">
+                                <div class="accuracy-fill" style="width: 96%"></div>
+                            </div>
+                            <span>96%</span>
+                        </div>
+                        <a href="https://das-medhub.github.io/site/" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAS MedHub Section -->
+    <section id="medhub">
+        <div class="container">
+            <h2 class="section-title">DAS medhub</h2>
+            <div class="medhub-content">
+                <div class="medhub-img">
+                    <img src="images/das.png" alt="DAS MedHub">
+                </div>
+                <div class="medhub-text">
+                    <h3>Revolutionizing Healthcare with AI</h3>
+                    <p>DAS medhub is a healthtech startup focused on creating accessible, accurate, and affordable AI-powered diagnostic solutions for healthcare providers and patients worldwide.</p>
+                    
+                    <div class="medhub-feature">
+                        <div class="feature-icon">🔍</div>
+                        <div class="feature-text">
+                            <h4>Early Disease Detection</h4>
+                            <p>Our AI platforms enable healthcare providers to detect diseases at earlier stages, improving treatment outcomes and saving lives.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medhub-feature">
+                        <div class="feature-icon">🌐</div>
+                        <div class="feature-text">
+                            <h4>Global Accessibility</h4>
+                            <p>We're committed to making advanced diagnostic tools accessible to underserved regions and communities around the world.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medhub-feature">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-text">
+                            <h4>Continuous Learning</h4>
+                            <p>Our models continuously improve through responsible data collection and collaborative research partnerships.</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://das-medhub.github.io/site/" class="btn">Collaborate With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambassador Section -->
+    <section id="ambassador">
+        <div class="container">
+            <h2 class="section-title">Extern Ambassador</h2>
+            <div class="ambassador-content">
+                <div class="ambassador-text">
+                    <h3>Bridging Healthcare and Technology</h3>
+                    <p>As an Extern Ambassador, I work to build meaningful connections between healthcare institutions, technology innovators, and patients. My role focuses on facilitating knowledge exchange, promoting innovation, and advocating for ethical AI development in healthcare.</p>
+                    
+                    <ul class="role-list">
+                        <li>Representing cutting-edge healthcare AI solutions to medical institutions</li>
+                        <li>Facilitating partnerships between researchers and healthcare providers</li>
+                        <li>Speaking at conferences about AI innovations in healthcare</li>
+                        <li>Advising on ethical implementation of AI in clinical settings</li>
+                        <li>Mentoring students and professionals in healthtech</li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn">Invite Me to Speak</a>
+                </div>
+                <div class="ambassador-img">
+                    <img src="images/OIP (2).jpeg" alt="Extern Ambassador">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div>
+                    <div class="contact-info">
+                        <p>Interested in collaborating, learning more about my models, or discussing how AI can transform healthcare? Reach out to me directly.</p>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>divinesebukpor@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 7626922236</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Accra, Ghana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm" action="https://formspree.io/f/xgvavbap" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+              <div class="logo">Divine Sebukpor</div>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/" class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/Sebukpor" class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+                
+                <p>&copy; 2025 Divine Sebukpor. All Rights Reserved.</p>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        
+// Form submission handling for Formspree
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        // Let the form submit normally to Formspree
+        // Optional: Add visual feedback
+        const button = contactForm.querySelector('button[type="submit"]');
+        button.textContent = "Sending...";
+        button.disabled = true;
+        
+        // You can add this to reset the form after submission
+        setTimeout(() => {
+            button.textContent = "Send Message";
+            button.disabled = false;
+        }, 5000);
+    });
+}
+        
+        // Scroll reveal animations
+        window.addEventListener('scroll', revealOnScroll);
+        
+        function revealOnScroll() {
+            const revealElements = document.querySelectorAll('.model-card, .about-content, .medhub-content, .ambassador-content');
+            
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Initialize scroll reveal
+        document.addEventListener('DOMContentLoaded', function() {
+            const revealElements = document.querySelectorAll('.model-card, .about-content, .medhub-content, .ambassador-content');
+            
+            revealElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // Trigger initial reveal
+            revealOnScroll();
+        });
+    </script>
+</body>
+</html>
