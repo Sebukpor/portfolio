@@ -244,26 +244,29 @@
             gap: 1.5rem;
         }
         
-        /* About Section - More Professional */
+        /* About Section - Improved for Mobile */
         #about {
             background-color: white;
         }
         
         .about-content {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 5rem;
+            gap: 3rem;
         }
         
         .about-img {
-            flex: 1;
+            width: 100%;
             display: flex;
             justify-content: center;
         }
         
         .about-img img {
-            width: 430px;
-            height: 515px;
+            width: 100%;
+            max-width: 370px;
+            height: auto;
+            aspect-ratio: 3/4;
             border-radius: 30%;
             object-fit: cover;
             border: 8px solid var(--neutral-gray);
@@ -277,7 +280,8 @@
         }
         
         .about-text {
-            flex: 1;
+            width: 100%;
+            text-align: center;
         }
         
         .about-text h3 {
@@ -291,10 +295,12 @@
             margin-bottom: 1.5rem;
             color: var(--text-dark);
             line-height: 1.8;
+            text-align: left;
         }
         
         .skills {
             margin-top: 2rem;
+            text-align: center;
         }
         
         .skill-tags {
@@ -302,6 +308,7 @@
             flex-wrap: wrap;
             gap: 0.8rem;
             margin-top: 1rem;
+            justify-content: center;
         }
         
         .skill-tag {
@@ -312,6 +319,7 @@
             font-size: 0.85rem;
             font-weight: 600;
             border: 1px solid var(--neutral-gray);
+            white-space: nowrap;
         }
         
         /* Models Section - More Card Consistency */
@@ -321,8 +329,8 @@
         
         .models-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
         }
         
         .model-card {
@@ -344,7 +352,7 @@
         
         .model-img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             overflow: hidden;
         }
         
@@ -360,21 +368,21 @@
         }
         
         .model-info {
-            padding: 2rem;
+            padding: 1.5rem;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
         
         .model-info h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--primary);
             font-weight: 700;
             margin-bottom: 1rem;
         }
         
         .model-info p {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #555;
             margin-bottom: 1.5rem;
             flex: 1;
@@ -386,18 +394,18 @@
             align-items: center;
             justify-content: space-between;
             margin: 1.5rem 0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--primary);
         }
         
         .accuracy-bar {
             flex: 1;
-            height: 10px;
+            height: 8px;
             background-color: #e0e0e0;
             border-radius: 5px;
             overflow: hidden;
-            margin: 0 12px;
+            margin: 0 10px;
             position: relative;
         }
         
@@ -414,20 +422,22 @@
         }
         
         .medhub-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
             align-items: center;
         }
         
         .medhub-img {
+            width: 100%;
             text-align: center;
             position: relative;
         }
         
         .medhub-img img {
-            max-width: 100%;
-            height: 400px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
             border-radius: 12px;
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
@@ -438,11 +448,16 @@
             box-shadow: var(--shadow-hover);
         }
         
+        .medhub-text {
+            width: 100%;
+        }
+        
         .medhub-text h3 {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             color: var(--primary);
             font-weight: 600;
+            text-align: center;
         }
         
         .medhub-text p {
@@ -453,13 +468,15 @@
         
         .medhub-feature {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             margin-bottom: 2rem;
+            text-align: center;
         }
         
         .feature-icon {
             font-size: 1.8rem;
-            margin-right: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--accent);
             min-width: 40px;
             text-align: center;
@@ -483,24 +500,28 @@
         }
         
         .ambassador-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
             align-items: center;
         }
         
         .ambassador-text {
-            order: 1;
+            order: 2;
+            width: 100%;
         }
         
         .ambassador-img {
-            order: 2;
+            order: 1;
+            width: 100%;
             text-align: center;
             position: relative;
         }
         
         .ambassador-img img {
-            max-width: 100%;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
             border-radius: 12px;
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
@@ -516,6 +537,7 @@
             margin-bottom: 1.5rem;
             color: var(--primary);
             font-weight: 600;
+            text-align: center;
         }
         
         .ambassador-text p {
@@ -527,6 +549,7 @@
         .role-list {
             list-style: none;
             margin-top: 2rem;
+            padding-left: 1rem;
         }
         
         .role-list li {
@@ -534,6 +557,7 @@
             align-items: flex-start;
             margin-bottom: 1.2rem;
             line-height: 1.6;
+            text-align: left;
         }
         
         .role-list li:before {
@@ -543,6 +567,7 @@
             color: var(--accent);
             font-weight: bold;
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
         
         /* Contact Section */
@@ -551,25 +576,29 @@
         }
         
         .contact-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 3rem;
         }
         
         .contact-info {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
         }
         
         .contact-info p {
             margin-bottom: 2rem;
             color: var(--text-dark);
             line-height: 1.8;
+            text-align: left;
         }
         
         .contact-method {
             display: flex;
+            flex-direction: column;
             align-items: center;
             margin-bottom: 1.8rem;
+            text-align: center;
         }
         
         .contact-icon {
@@ -580,7 +609,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 1.5rem;
+            margin-right: 0;
+            margin-bottom: 1rem;
             color: white;
             font-size: 1.3rem;
             flex-shrink: 0;
@@ -601,9 +631,10 @@
         
         .contact-form {
             background-color: var(--light);
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 12px;
             box-shadow: var(--shadow);
+            width: 100%;
         }
         
         .contact-form h3 {
@@ -614,7 +645,7 @@
         }
         
         .form-group {
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
         }
         
         .form-group label {
@@ -627,7 +658,7 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 1rem;
+            padding: 0.9rem;
             border: 1px solid #ddd;
             border-radius: 8px;
             font-size: 1rem;
@@ -642,7 +673,7 @@
         }
         
         .form-group textarea {
-            height: 180px;
+            height: 150px;
             resize: none;
         }
         
@@ -686,6 +717,7 @@
             display: flex;
             gap: 1.5rem;
             margin: 2rem 0;
+            justify-content: center;
         }
         
         .social-icon {
@@ -727,7 +759,79 @@
             }
         }
         
-        /* Responsive Styles */
+        /* Responsive Styles - Improved for Mobile */
+        @media (min-width: 768px) {
+            /* Desktop styles */
+            .about-content {
+                flex-direction: row;
+                align-items: center;
+                gap: 5rem;
+            }
+            
+            .about-text {
+                text-align: left;
+            }
+            
+            .skills {
+                text-align: left;
+            }
+            
+            .skill-tags {
+                justify-content: flex-start;
+            }
+            
+            .medhub-content {
+                grid-template-columns: 1fr 1fr;
+                display: grid;
+                align-items: center;
+            }
+            
+            .medhub-feature {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .feature-icon {
+                margin-right: 1.5rem;
+                margin-bottom: 0;
+            }
+            
+            .ambassador-content {
+                grid-template-columns: 1fr 1fr;
+                display: grid;
+                align-items: center;
+            }
+            
+            .ambassador-text {
+                order: 1;
+            }
+            
+            .ambassador-img {
+                order: 2;
+            }
+            
+            .contact-content {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                display: grid;
+            }
+            
+            .contact-info {
+                text-align: left;
+            }
+            
+            .contact-method {
+                flex-direction: row;
+                align-items: center;
+                text-align: left;
+            }
+            
+            .contact-icon {
+                margin-right: 1.5rem;
+                margin-bottom: 0;
+            }
+        }
+        
         @media (max-width: 1200px) {
             .section-title {
                 font-size: 2.2rem;
@@ -743,32 +847,12 @@
         }
         
         @media (max-width: 992px) {
-            .about-content, 
-            .medhub-content, 
-            .ambassador-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .ambassador-text {
-                order: 2;
-            }
-            
-            .ambassador-img {
-                order: 1;
-            }
-            
             .hero-content h1 {
                 font-size: 2.8rem;
             }
             
             .hero-content h2 {
                 font-size: 1.5rem;
-            }
-            
-            .about-img img {
-                width: 250px;
-                height: 250px;
             }
         }
         
@@ -848,6 +932,10 @@
             section {
                 padding: 4rem 0;
             }
+            
+            .about-img img {
+                max-width: 320px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -859,17 +947,31 @@
                 font-size: 2.2rem;
             }
             
-            .about-img img {
-                width: 450px;
-                height: 450px;
+            .hero-content h2 {
+                font-size: 1.3rem;
             }
             
-            .contact-content {
-                grid-template-columns: 1fr;
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .about-text h3,
+            .medhub-text h3,
+            .ambassador-text h3,
+            .contact-form h3 {
+                font-size: 1.6rem;
+            }
+            
+            .model-info h3 {
+                font-size: 1.3rem;
+            }
+            
+            .feature-text h4 {
+                font-size: 1.2rem;
             }
             
             .contact-form {
-                padding: 1.8rem;
+                padding: 1.5rem;
             }
         }
     </style>
