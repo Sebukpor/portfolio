@@ -20,6 +20,7 @@
             --text-light: #f8f9fa;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
         
         /* Base Styles */
@@ -41,7 +42,7 @@
         a {
             text-decoration: none;
             color: var(--secondary);
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         a:hover {
@@ -62,7 +63,7 @@
             border-radius: 30px;
             border: none;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             font-weight: 600;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -114,21 +115,21 @@
             padding: 6rem 0;
         }
         
-        /* Header - More Professional */
+        /* Header - Improved with better logo sizing */
         header {
             background-color: var(--primary);
             color: white;
-            padding: 1.2rem 0;
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         header.scrolled {
-            padding: 0.8rem 0;
+            padding: 0.6rem 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         
@@ -136,19 +137,24 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 100%;
         }
         
         .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: white;
+            height: 50px; /* Fixed height for logo container */
             display: flex;
             align-items: center;
         }
         
-        .logo i {
-            margin-right: 0.5rem;
-            color: var(--accent);
+        .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+        
+        .logo:hover img {
+            transform: scale(1.05);
         }
         
         .nav-links {
@@ -196,25 +202,28 @@
             height: 3px;
             margin: 6px auto;
             background-color: white;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             border-radius: 3px;
         }
         
-        /* Hero Section - More Impactful */
+        /* Hero Section - More Impactful with gradient overlay */
         #hero {
             height: 100vh;
             min-height: 700px;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, rgba(3, 82, 85, 0.9) 0%, rgba(40, 179, 132, 0.8) 100%), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            background: 
+                linear-gradient(135deg, rgba(3, 82, 85, 0.95) 0%, rgba(40, 179, 132, 0.85) 100%), 
+                url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
             color: white;
             text-align: left;
             padding-top: 80px;
+            position: relative;
         }
         
         .hero-content {
             max-width: 800px;
-            animation: fadeInUp 1s ease;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
         }
         
         .hero-content h1 {
@@ -222,7 +231,7 @@
             margin-bottom: 1.5rem;
             line-height: 1.2;
             font-weight: 800;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         .hero-content h2 {
@@ -244,7 +253,7 @@
             gap: 1.5rem;
         }
         
-        /* About Section - Improved for Mobile */
+        /* About Section - Improved layout */
         #about {
             background-color: white;
         }
@@ -267,11 +276,11 @@
             max-width: 370px;
             height: auto;
             aspect-ratio: 3/4;
-            border-radius: 30%;
+            border-radius: 20px;
             object-fit: cover;
-            border: 8px solid var(--neutral-gray);
+            border: 8px solid white;
             box-shadow: var(--shadow);
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .about-img img:hover {
@@ -320,9 +329,16 @@
             font-weight: 600;
             border: 1px solid var(--neutral-gray);
             white-space: nowrap;
+            transition: var(--transition);
         }
         
-        /* Models Section - More Card Consistency */
+        .skill-tag:hover {
+            background-color: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Models Section - Improved Card Design */
         #models {
             background-color: var(--light);
         }
@@ -338,11 +354,12 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: var(--shadow);
-            transition: all 0.3s ease;
+            transition: var(--transition);
             text-align: center;
             height: 100%;
             display: flex;
             flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
         
         .model-card:hover {
@@ -354,6 +371,7 @@
             width: 100%;
             height: 200px;
             overflow: hidden;
+            position: relative;
         }
         
         .model-img img {
@@ -364,11 +382,21 @@
         }
         
         .model-card:hover .model-img img {
-            transform: scale(1.05);
+            transform: scale(1.1);
+        }
+        
+        .model-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.1), transparent);
         }
         
         .model-info {
-            padding: 1.5rem;
+            padding: 1.8rem;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -416,7 +444,7 @@
             transition: width 0.8s ease;
         }
         
-        /* DAS MedHub Section */
+        /* DAS MedHub Section - Improved Feature Cards */
         #medhub {
             background-color: white;
         }
@@ -440,7 +468,7 @@
             height: auto;
             border-radius: 12px;
             box-shadow: var(--shadow);
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .medhub-img img:hover {
@@ -472,14 +500,31 @@
             align-items: center;
             margin-bottom: 2rem;
             text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .medhub-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
         
         .feature-icon {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             color: var(--accent);
             min-width: 40px;
             text-align: center;
+            background: rgba(238, 155, 0, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .feature-text h4 {
@@ -494,7 +539,7 @@
             line-height: 1.7;
         }
         
-        /* Ambassador Section */
+        /* Ambassador Section - Improved Layout */
         #ambassador {
             background-color: var(--light);
         }
@@ -524,7 +569,7 @@
             height: auto;
             border-radius: 12px;
             box-shadow: var(--shadow);
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .ambassador-img img:hover {
@@ -558,19 +603,28 @@
             margin-bottom: 1.2rem;
             line-height: 1.6;
             text-align: left;
+            position: relative;
+            padding-left: 2rem;
         }
         
         .role-list li:before {
-            content: '✓';
-            display: inline-block;
-            margin-right: 1rem;
-            color: var(--accent);
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.4rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             font-weight: bold;
-            font-size: 1.2rem;
-            flex-shrink: 0;
+            font-size: 0.8rem;
         }
         
-        /* Contact Section */
+        /* Contact Section - Improved Form */
         #contact {
             background-color: white;
         }
@@ -599,11 +653,21 @@
             align-items: center;
             margin-bottom: 1.8rem;
             text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
         
         .contact-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background-color: var(--accent);
             border-radius: 50%;
             display: flex;
@@ -612,9 +676,15 @@
             margin-right: 0;
             margin-bottom: 1rem;
             color: white;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             flex-shrink: 0;
             box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .contact-method:hover .contact-icon {
+            background-color: var(--secondary);
+            transform: rotate(10deg);
         }
         
         .contact-details h4 {
@@ -631,10 +701,15 @@
         
         .contact-form {
             background-color: var(--light);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 12px;
             box-shadow: var(--shadow);
             width: 100%;
+            transition: var(--transition);
+        }
+        
+        .contact-form:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
         
         .contact-form h3 {
@@ -658,11 +733,11 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 0.9rem;
+            padding: 1rem;
             border: 1px solid #ddd;
             border-radius: 8px;
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .form-group input:focus,
@@ -677,12 +752,23 @@
             resize: none;
         }
         
-        /* Footer */
+        /* Footer - Improved Design */
         footer {
             background-color: var(--primary-dark);
             color: white;
-            padding: 3rem 0 2rem;
+            padding: 4rem 0 2rem;
             text-align: center;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
         }
         
         .footer-content {
@@ -721,22 +807,22 @@
         }
         
         .social-icon {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             font-size: 1.2rem;
         }
         
         .social-icon:hover {
             background-color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: var(--shadow-hover);
         }
         
         .copyright {
@@ -745,6 +831,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             width: 100%;
             opacity: 0.7;
+            font-size: 0.9rem;
         }
         
         /* Animations */
@@ -756,6 +843,15 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
         
@@ -814,6 +910,7 @@
             .contact-content {
                 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
                 display: grid;
+                gap: 3rem;
             }
             
             .contact-info {
@@ -936,6 +1033,10 @@
             .about-img img {
                 max-width: 320px;
             }
+            
+            .contact-form {
+                padding: 1.8rem;
+            }
         }
         
         @media (max-width: 576px) {
@@ -973,6 +1074,16 @@
             .contact-form {
                 padding: 1.5rem;
             }
+            
+            .footer-logo {
+                font-size: 1.5rem;
+            }
+            
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -980,10 +1091,9 @@
     <!-- Header -->
     <header id="main-header">
         <nav class="container">
-            <div class="logo">
-                <img src="images/Screenshot_2025-06-21_210932-removebg-preview.png" alt="DAS Medhub Logo" />
-            </div>
-            <!--<a href="#" class="logo"><i class="fas fa-brain"></i> Divine Sebukpor</a>-->
+            <a href="#" class="logo">
+                <img src="images/Screenshot_2025-06-21_210932-removebg-preview.png" alt="Divine Sebukpor Logo" />
+            </a>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -1289,32 +1399,36 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-              <div class="logo">Divine Sebukpor</div>
-              <div class="social-links">
-                <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                  </svg>
-                </a>
-                <a href="https://github.com/Sebukpor" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                    <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-                
-                <p>&copy; 2025 Divine Sebukpor. All Rights Reserved.</p>
+                <div class="footer-logo">Divine Sebukpor</div>
+                <div class="footer-text">
+                    <p>Innovating healthcare through artificial intelligence to create a healthier future for all.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Sebukpor" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://medium.com/" class="social-icon" aria-label="Medium">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Divine Sebukpor. All Rights Reserved.
+                </div>
             </div>
         </div>
-        
     </footer>
 
     <script>
         // Mobile Menu Toggle
         const mobileMenu = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
+        const header = document.getElementById('main-header');
         
         mobileMenu.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
@@ -1327,6 +1441,15 @@
                 mobileMenu.classList.remove('active');
                 navLinks.classList.remove('active');
             });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
         
         // Smooth scrolling for nav links
@@ -1346,56 +1469,79 @@
             });
         });
         
+        // Form submission handling for Formspree
+        const contactForm = document.getElementById('contactForm');
         
-// Form submission handling for Formspree
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        // Let the form submit normally to Formspree
-        // Optional: Add visual feedback
-        const button = contactForm.querySelector('button[type="submit"]');
-        button.textContent = "Sending...";
-        button.disabled = true;
-        
-        // You can add this to reset the form after submission
-        setTimeout(() => {
-            button.textContent = "Send Message";
-            button.disabled = false;
-        }, 5000);
-    });
-}
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                // Let the form submit normally to Formspree
+                // Optional: Add visual feedback
+                const button = contactForm.querySelector('button[type="submit"]');
+                const originalText = button.textContent;
+                button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                button.disabled = true;
+                
+                // You can add this to reset the form after submission
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                }, 5000);
+            });
+        }
         
         // Scroll reveal animations
-        window.addEventListener('scroll', revealOnScroll);
-        
-        function revealOnScroll() {
-            const revealElements = document.querySelectorAll('.model-card, .about-content, .medhub-content, .ambassador-content');
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.about-content, .model-card, .medhub-content, .ambassador-content, .contact-content');
+            const windowHeight = window.innerHeight;
             
-            revealElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const elementVisible = 150;
                 
-                if (elementTop < windowHeight - 100) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
+                if (elementPosition < windowHeight - elementVisible) {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
                 }
             });
         }
         
-        // Initialize scroll reveal
-        document.addEventListener('DOMContentLoaded', function() {
-            const revealElements = document.querySelectorAll('.model-card, .about-content, .medhub-content, .ambassador-content');
+        // Initialize elements with hidden state
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.about-content, .model-card, .medhub-content, .ambassador-content, .contact-content');
             
-            revealElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            elements.forEach(element => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
             });
             
-            // Trigger initial reveal
-            revealOnScroll();
+            // Trigger initial animation check
+            animateOnScroll();
         });
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Preload images for better UX
+        function preloadImages() {
+            const images = [
+                'images/das.jpg',
+                'images/R.jpeg',
+                'images/OIP (1).jpeg',
+                'images/OIP.jpeg',
+                'images/R (1).jpeg',
+                'images/image-removebg-preview.png',
+                'images/das.png',
+                'images/OIP (2).jpeg'
+            ];
+            
+            images.forEach(image => {
+                new Image().src = image;
+            });
+        }
+        
+        // Call preload function when DOM is loaded
+        document.addEventListener('DOMContentLoaded', preloadImages);
     </script>
 </body>
 </html>
