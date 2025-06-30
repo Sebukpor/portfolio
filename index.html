@@ -131,25 +131,24 @@
             padding: 6rem 0;
         }
         
-        /* Header - More Professional */
-        header {
-            /*background-color: var(--primary);*/
-            background-color: linear-gradient(to right, #1C1F4A, #2C2C2C);
-            color: white;
-            padding: 1.2rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        header.scrolled {
-            padding: 0.8rem 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-        
+header {  
+    background: linear-gradient(to right, #0A0417 0%, #1A1030 50%, #0A0417 100%);  
+    color: white;  
+    padding: 1.2rem 0;  
+    position: fixed;  
+    width: 100%;  
+    top: 0;  
+    z-index: 1000;  
+    box-shadow: 0 4px 20px rgba(92, 36, 156, 0.15);  
+    transition: all 0.3s ease;  
+    border-bottom: 1px solid rgba(138, 43, 226, 0.1);  
+}  
+
+header.scrolled {  
+    padding: 0.8rem 0;  
+    box-shadow: 0 6px 25px rgba(92, 36, 156, 0.2);  
+    background: linear-gradient(to right, #0A0417, #1A1030);  
+}  
         nav {
             display: flex;
             justify-content: space-between;
