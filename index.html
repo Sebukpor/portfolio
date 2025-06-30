@@ -20,6 +20,10 @@
             --text-light: #f8f9fa;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+            --header-bg: #F0F7E8;
+            --header-text: #2D3748;
+            --footer-bg: #E5F0DB;
+            --footer-text: #2D3748;
         }
         
         /* Base Styles */
@@ -88,8 +92,17 @@
             color: var(--primary);
         }
         
-           .logo {
-            height: 80px; /* Fixed height for logo container */
+        .btn-dark {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-dark:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .logo {
+            height: 80px;
             display: flex;
             align-items: center;
         }
@@ -98,7 +111,7 @@
             height: 100%;
             width: auto;
             object-fit: contain;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
         
         .logo:hover img {
@@ -131,42 +144,29 @@
             padding: 6rem 0;
         }
         
-header {
-    background: #F0F7E8; /* Very light sage green */
-    color: #333; /* Dark gray text (adjust if menu is white) */
-    padding: 1.2rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(180, 214, 160, 0.5); /* Subtle green accent */
-}
-
-header.scrolled {
-    padding: 0.8rem 0;
-    background: #E5F0DB; /* Slightly deeper green on scroll */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
+        header {
+            background: var(--header-bg);
+            color: var(--header-text);
+            padding: 1.2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(180, 214, 160, 0.5);
+        }
+        
+        header.scrolled {
+            padding: 0.8rem 0;
+            background: var(--header-bg);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: white;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            margin-right: 0.5rem;
-            color: var(--accent);
         }
         
         .nav-links {
@@ -179,11 +179,16 @@ header.scrolled {
         }
         
         .nav-links a {
-            color: #2D3748 !important;
-            font-weight: 500;
+            color: var(--header-text) !important;
+            font-weight: 600;
             position: relative;
             font-size: 1rem;
             padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent) !important;
         }
         
         .nav-links a::after {
@@ -206,6 +211,7 @@ header.scrolled {
             display: none;
             cursor: pointer;
             z-index: 1001;
+            padding: 10px;
         }
         
         .bar {
@@ -213,12 +219,12 @@ header.scrolled {
             width: 28px;
             height: 3px;
             margin: 6px auto;
-            background-color: white;
+            background-color: var(--header-text);
             transition: all 0.3s ease;
             border-radius: 3px;
         }
         
-        /* Hero Section - More Impactful */
+        /* Hero Section */
         #hero {
             height: 100vh;
             min-height: 700px;
@@ -262,7 +268,7 @@ header.scrolled {
             gap: 1.5rem;
         }
         
-        /* About Section - Improved for Mobile */
+        /* About Section */
         #about {
             background-color: white;
         }
@@ -338,9 +344,16 @@ header.scrolled {
             font-weight: 600;
             border: 1px solid var(--neutral-gray);
             white-space: nowrap;
+            transition: all 0.3s ease;
         }
         
-        /* Models Section - More Card Consistency */
+        .skill-tag:hover {
+            background-color: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Models Section */
         #models {
             background-color: var(--light);
         }
@@ -406,7 +419,7 @@ header.scrolled {
             flex: 1;
         }
         
-        /* Improved Accuracy Bar */
+        /* Accuracy Bar */
         .accuracy {
             display: flex;
             align-items: center;
@@ -576,16 +589,18 @@ header.scrolled {
             margin-bottom: 1.2rem;
             line-height: 1.6;
             text-align: left;
+            position: relative;
+            padding-left: 1.5rem;
         }
         
         .role-list li:before {
             content: '✓';
             display: inline-block;
-            margin-right: 1rem;
+            position: absolute;
+            left: 0;
             color: var(--accent);
             font-weight: bold;
             font-size: 1.2rem;
-            flex-shrink: 0;
         }
         
         /* Contact Section */
@@ -695,11 +710,11 @@ header.scrolled {
             resize: none;
         }
         
-        /* Footer */
+        /* Footer - Improved Visibility */
         footer {
-            background-color:#F0F7E8;;
-            color: #2D3748 !important;
-            padding: 3rem 0 2rem;
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 4rem 0 2rem;
             text-align: center;
         }
         
@@ -710,25 +725,20 @@ header.scrolled {
         }
         
         .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #2D3748 !important;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin-bottom: 2rem;
         }
         
-        .footer-logo i {
-            margin-right: 0.5rem;
-            color: var(--accent);
+        .footer-logo img {
+            max-height: 80px;
+            width: auto;
         }
         
         .footer-text {
             max-width: 600px;
             margin: 0 auto 2rem;
-            opacity: 0.8;
             line-height: 1.7;
+            color: var(--footer-text);
+            font-size: 1rem;
         }
         
         .social-links {
@@ -739,9 +749,9 @@ header.scrolled {
         }
         
         .social-icon {
-            width: 45px;
-            height: 45px;
-            background-color: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -749,20 +759,40 @@ header.scrolled {
             color: white;
             transition: all 0.3s ease;
             font-size: 1.2rem;
+            box-shadow: var(--shadow);
         }
         
         .social-icon:hover {
-            background-color: var(--accent);
+            background-color: transparent;
             transform: translateY(-3px);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: var(--footer-text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
         }
         
         .copyright {
             margin-top: 2rem;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(45, 55, 72, 0.1);
             width: 100%;
-            opacity: 0.7;
+            color: var(--footer-text);
+            font-size: 0.9rem;
         }
         
         /* Animations */
@@ -777,7 +807,7 @@ header.scrolled {
             }
         }
         
-        /* Responsive Styles - Improved for Mobile */
+        /* Responsive Styles */
         @media (min-width: 768px) {
             /* Desktop styles */
             .about-content {
@@ -902,6 +932,7 @@ header.scrolled {
             .nav-links a {
                 font-size: 1.1rem;
                 padding: 0.5rem 0;
+                color: white !important;
             }
             
             .mobile-menu {
@@ -954,6 +985,11 @@ header.scrolled {
             .about-img img {
                 max-width: 320px;
             }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1001,7 +1037,6 @@ header.scrolled {
             <div class="logo">
                 <img src="images/logodas-removebg-preview.png" alt="DAS Medhub Logo" />
             </div>
-            <!--<a href="#" class="logo"><i class="fas fa-brain"></i> Divine Sebukpor</a>-->
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -1086,7 +1121,7 @@ header.scrolled {
                             </div>
                             <span>96%</span>
                         </div>
-                        <a href="https://models.dasmedhub.com/" class="btn">View Details</a>
+                        <a href="https://models.dasmedhub.com/" class="btn btn-dark">View Details</a>
                     </div>
                 </div>
                 
@@ -1105,7 +1140,7 @@ header.scrolled {
                             </div>
                             <span>96%</span>
                         </div>
-                        <a href="https://models.dasmedhub.com/" class="btn">View Details</a>
+                        <a href="https://models.dasmedhub.com/" class="btn btn-dark">View Details</a>
                     </div>
                 </div>
                 
@@ -1124,7 +1159,7 @@ header.scrolled {
                             </div>
                             <span>95%</span>
                         </div>
-                        <a href="https://models.dasmedhub.com/" class="btn">View Details</a>
+                        <a href="https://models.dasmedhub.com/" class="btn btn-dark">View Details</a>
                     </div>
                 </div>
                 
@@ -1143,7 +1178,7 @@ header.scrolled {
                             </div>
                             <span>97%</span>
                         </div>
-                        <a href="https://models.dasmedhub.com/" class="btn">View Details</a>
+                        <a href="https://models.dasmedhub.com/" class="btn btn-dark">View Details</a>
                     </div>
                 </div>
                 
@@ -1162,7 +1197,7 @@ header.scrolled {
                             </div>
                             <span>96%</span>
                         </div>
-                        <a href="https://site.dasmedhub.com/land.html" class="btn">View Details</a>
+                        <a href="https://site.dasmedhub.com/land.html" class="btn btn-dark">View Details</a>
                     </div>
                 </div>
             </div>
@@ -1205,7 +1240,7 @@ header.scrolled {
                         </div>
                     </div>
                     
-                    <a href="https://site.dasmedhub.com/" class="btn">Learn More About Our Work</a>
+                    <a href="https://site.dasmedhub.com/" class="btn btn-dark">Learn More About Our Work</a>
                 </div>
             </div>
         </div>
@@ -1229,7 +1264,7 @@ header.scrolled {
                         <li>Promoting responsible AI development practices in medical applications</li>
                     </ul>
                     
-                    <a href="#contact" class="btn">Request Speaking Engagement</a>
+                    <a href="#contact" class="btn btn-dark">Request Speaking Engagement</a>
                 </div>
                 <div class="ambassador-img">
                     <img src="images/OIP (2).jpeg" alt="Divine Sebukpor as Extern Ambassador">
@@ -1296,39 +1331,54 @@ header.scrolled {
                             <textarea id="message" name="message" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="btn btn-dark">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - Improved -->
     <footer>
         <div class="container">
             <div class="footer-content">
-              <div class="logo">
-                <img src="images/logodas-removebg-preview.png" alt="DAS Medhub Logo" />
-            </div>
-              <div class="social-links">
-                <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                  </svg>
-                </a>
-                <a href="https://github.com/Sebukpor" class="social-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                    <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+                <div class="footer-logo">
+                    <img src="images/logodas-removebg-preview.png" alt="DAS Medhub Logo">
+                </div>
                 
-                <p>&copy; 2025 Divine Sebukpor. All Rights Reserved.</p>
+                <div class="footer-text">
+                    <p>Innovating healthcare through artificial intelligence to create accessible, accurate, and affordable diagnostic solutions for everyone.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#models">AI Models</a>
+                    <a href="#medhub">DAS medhub</a>
+                    <a href="#ambassador">Ambassador</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Sebukpor" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2025 Divine Sebukpor. All Rights Reserved.</p>
+                </div>
             </div>
         </div>
-        
     </footer>
 
     <script>
@@ -1366,25 +1416,35 @@ header.scrolled {
             });
         });
         
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
         
-// Form submission handling for Formspree
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        // Let the form submit normally to Formspree
-        // Optional: Add visual feedback
-        const button = contactForm.querySelector('button[type="submit"]');
-        button.textContent = "Sending...";
-        button.disabled = true;
+        // Form submission handling for Formspree
+        const contactForm = document.getElementById('contactForm');
         
-        // You can add this to reset the form after submission
-        setTimeout(() => {
-            button.textContent = "Send Message";
-            button.disabled = false;
-        }, 5000);
-    });
-}
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                // Let the form submit normally to Formspree
+                // Optional: Add visual feedback
+                const button = contactForm.querySelector('button[type="submit"]');
+                const originalText = button.textContent;
+                button.textContent = "Sending...";
+                button.disabled = true;
+                
+                // Reset after submission
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                }, 5000);
+            });
+        }
         
         // Scroll reveal animations
         window.addEventListener('scroll', revealOnScroll);
@@ -1415,6 +1475,12 @@ if (contactForm) {
             
             // Trigger initial reveal
             revealOnScroll();
+            
+            // Initialize header state
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            }
         });
     </script>
 </body>
