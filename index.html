@@ -3,224 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divine Sebukpor | AI Healthcare Innovator</title>
+    <title>Divine Sebukpor | Healthcare AI Innovator</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Modern Color Palette - Clean & Professional */
+        /* Modern Color Palette - Clean Teal & Neutral Professional */
         :root {
-            /* Primary Colors - Sophisticated Teal */
-            --primary: #0A5C8A;
-            --primary-dark: #083C5A;
-            --primary-light: #4C9DB9;
-            --primary-soft: #E8F4F9;
-            
-            /* Secondary Colors */
-            --secondary: #1A365D;
-            --accent: #E63946;
-            --accent-light: #FF6B6B;
-            
-            /* Neutral Palette */
-            --white: #FFFFFF;
-            --light: #F8FAFC;
-            --light-gray: #F1F5F9;
-            --gray: #CBD5E1;
-            --dark-gray: #64748B;
+            /* Primary Colors */
+            --primary: #0d9488; /* Clean teal */
+            --primary-dark: #0f766e;
+            --primary-light: #5eead4;
+            --primary-ultralight: #f0fdfa;
+           
+            /* Secondary & Accent Colors */
+            --secondary: #1e293b; /* Deep slate */
+            --accent: #f97316; /* Vibrant orange for subtle accents */
+            --accent-complement: #7c3aed; /* Violet for highlights */
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+           
+            /* Neutral Palette - Minimal and airy */
+            --light: #ffffff;
+            --light-mid: #f8fafc;
+            --neutral: #e2e8f0;
+            --neutral-dark: #64748b;
             --dark: #334155;
-            --black: #0F172A;
-            
-            /* Gradients */
+            --darker: #0f172a;
+           
+            /* Gradients - Subtle and modern */
             --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            
-            /* Typography */
-            --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            
-            /* Spacing */
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #fb923c 100%);
+            --gradient-hero: linear-gradient(135deg, rgba(13, 148, 136, 0.85) 0%, rgba(249, 115, 22, 0.7) 100%);
+            --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+           
+            /* Typography - Refined */
+            --font-heading: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+           
+            /* Spacing - Generous for cleanliness */
             --spacing-xs: 0.5rem;
             --spacing-sm: 1rem;
             --spacing-md: 1.5rem;
             --spacing-lg: 2rem;
             --spacing-xl: 3rem;
             --spacing-xxl: 4rem;
-            
-            /* Shadows */
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.12);
-            
-            /* Borders */
-            --border-radius-sm: 8px;
-            --border-radius-md: 12px;
+            --spacing-3xl: 5rem;
+            --container-width: 1200px;
+            --border-radius-sm: 6px;
+            --border-radius-md: 10px;
             --border-radius-lg: 16px;
-            --border-radius-xl: 24px;
-            
-            /* Transitions */
-            --transition-fast: 0.2s ease;
-            --transition: 0.3s ease;
-            --transition-slow: 0.5s ease;
+            --border-radius-full: 9999px;
+           
+            /* Shadows - Minimal and soft */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+           
+            /* Transitions - Smooth */
+            --transition-fast: 0.15s ease;
+            --transition-normal: 0.25s ease;
+            --transition-slow: 0.4s ease;
         }
-
-        /* Reset & Base Styles */
+        /* Base Styles - Clean reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
         }
-
         body {
             font-family: var(--font-body);
-            background-color: var(--white);
+            background-color: var(--light);
             color: var(--dark);
-            line-height: 1.6;
-            font-size: 16px;
+            line-height: 1.7;
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
         }
-
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-heading);
             font-weight: 700;
-            line-height: 1.2;
-            color: var(--secondary);
+            line-height: 1.3;
+            margin-bottom: var(--spacing-md);
+            color: var(--darker);
         }
-
         p {
             margin-bottom: var(--spacing-md);
-            color: var(--dark-gray);
+            color: var(--neutral-dark);
         }
-
         a {
             text-decoration: none;
-            color: inherit;
+            color: var(--primary);
+            transition: color var(--transition-normal);
         }
-
+        a:hover {
+            color: var(--primary-dark);
+        }
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
-
         .container {
-            max-width: 1200px;
+            max-width: var(--container-width);
             margin: 0 auto;
-            padding: 0 var(--spacing-lg);
+            padding: 0 clamp(1rem, 2.5vw, 1.5rem);
         }
-
-        section {
-            padding: var(--spacing-xxl) 0;
-            position: relative;
-        }
-
-        /* Typography Scale */
-        .h1 { font-size: 3.5rem; }
-        .h2 { font-size: 2.5rem; }
-        .h3 { font-size: 2rem; }
-        .h4 { font-size: 1.5rem; }
-        .h5 { font-size: 1.25rem; }
-        .h6 { font-size: 1rem; }
-
-        @media (max-width: 768px) {
-            .h1 { font-size: 2.5rem; }
-            .h2 { font-size: 2rem; }
-            .h3 { font-size: 1.75rem; }
-            .h4 { font-size: 1.25rem; }
-        }
-
-        /* Buttons */
+        /* Buttons - Minimalist */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: var(--spacing-xs);
-            padding: 0.875rem 1.75rem;
-            border-radius: var(--border-radius-sm);
-            font-family: var(--font-heading);
-            font-weight: 600;
-            font-size: 0.95rem;
+            gap: 0.5rem;
+            background: var(--gradient-primary);
+            color: white;
+            padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+            border-radius: var(--border-radius-md);
             border: none;
             cursor: pointer;
-            transition: all var(--transition);
-            text-decoration: none;
+            transition: all var(--transition-normal);
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow);
+            font-family: var(--font-heading);
             position: relative;
             overflow: hidden;
         }
-
-        .btn::after {
+        .btn::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: var(--transition-slow);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left var(--transition-slow);
         }
-
-        .btn:hover::after {
+        .btn:hover::before {
             left: 100%;
         }
-
-        .btn-primary {
-            background: var(--gradient-primary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
+        .btn:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
-
-        .btn-secondary {
+        .btn-outline {
             background: transparent;
             border: 2px solid var(--primary);
             color: var(--primary);
         }
-
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: var(--white);
-            transform: translateY(-2px);
+        .btn-outline:hover {
+            background: var(--gradient-primary);
+            color: white;
         }
-
-        .btn-accent {
-            background: var(--gradient-accent);
-            color: var(--white);
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
         }
-
-        .btn-accent:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+        /* Section Titles - Centered, clean */
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            margin-bottom: var(--spacing-xl);
+            position: relative;
+            padding-bottom: var(--spacing-sm);
+            color: var(--darker);
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: -0.02em;
         }
-
-        /* Header */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 3px;
+            width: 60px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--neutral-dark);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-xl);
+            text-align: center;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        section {
+            padding: var(--spacing-3xl) 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Header - Minimal sticky */
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            color: var(--secondary);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding: var(--spacing-sm) 0;
-            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            backdrop-filter: blur(20px);
         }
-
         header.scrolled {
             padding: 0.75rem 0;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow);
         }
-
         nav {
             display: flex;
             justify-content: space-between;
@@ -273,419 +275,715 @@
         .mobile-menu {
             display: none;
             cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
         }
-
-        /* Hero Section */
+        .bar {
+            display: block;
+            width: 24px;
+            height: 2px;
+            margin: 4px auto;
+            background-color: var(--secondary);
+            transition: all var(--transition-fast);
+            border-radius: 1px;
+        }
+        /* Hero Section - Simplified, immersive */
         #hero {
             padding-top: 140px;
-            background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+            padding-bottom: 100px;
+            background: var(--gradient-hero), url('images/11.jpg') center/cover no-repeat;
+            color: white;
+            position: relative;
             overflow: hidden;
         }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xxl);
-            align-items: center;
-        }
-
         .hero-content {
             position: relative;
             z-index: 2;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: var(--gradient-primary);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius-sm);
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .hero-image {
-            position: relative;
-        }
-
-        .profile-image {
-            width: 100%;
-            max-width: 400px;
-            border-radius: var(--border-radius-xl);
-            box-shadow: var(--shadow-lg);
-            margin: 0 auto;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-xl);
-        }
-
-        .stat {
             text-align: center;
-            padding: var(--spacing-md);
-            background: var(--white);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-sm);
-            transition: transform var(--transition);
-        }
-
-        .stat:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-number {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .stat-label {
-            font-size: 0.875rem;
-            color: var(--dark-gray);
-        }
-
-        /* Section Titles */
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--spacing-xxl);
-        }
-
-        .section-title {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .section-subtitle {
-            max-width: 600px;
-            margin: 0 auto;
-            color: var(--dark-gray);
-        }
-
-        /* Cards */
-        .card {
-            background: var(--white);
-            border-radius: var(--border-radius-lg);
-            padding: var(--spacing-xl);
-            box-shadow: var(--shadow);
-            transition: all var(--transition);
-            border: 1px solid var(--light-gray);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        /* About Section */
-        #about {
-            background: var(--light);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xxl);
-            align-items: start;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: var(--spacing-sm);
-            margin-top: var(--spacing-lg);
-        }
-
-        .skill-tag {
-            background: var(--primary-soft);
-            color: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius-sm);
-            font-size: 0.875rem;
-            font-weight: 500;
-            text-align: center;
-            transition: all var(--transition-fast);
-        }
-
-        .skill-tag:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        /* Experience Section */
-        .experience-timeline {
-            position: relative;
             max-width: 800px;
             margin: 0 auto;
         }
-
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+        .profile-image-container {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: var(--shadow-lg);
+            transition: transform var(--transition-normal);
+        }
+        .profile-image:hover {
+            transform: scale(1.03);
+        }
+        .profile-title {
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        .profile-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        .profile-tagline {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+        }
+        .profile-location {
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .profile-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .profile-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 500px;
+        }
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: var(--border-radius-md);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all var(--transition-normal);
+        }
+        .stat-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform var(--transition-normal);
+        }
+        .hero-scroll:hover {
+            transform: translateX(-50%) translateY(-3px);
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+        /* Experience Highlights - Grid, subtle */
+        .experience-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .experience-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+            color: white;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .experience-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: var(--shadow-md);
+        }
+        .experience-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-light);
+        }
+        .experience-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .experience-card p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+        /* About Section - Clean card */
+        #about {
+            background: var(--light-mid);
+        }
+        .about-card {
+            background: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: clamp(2rem, 4vw, 2.5rem);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transition: all var(--transition-normal);
+            border: 1px solid var(--neutral);
+        }
+        .about-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .about-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--darker);
+        }
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        .skills {
+            margin-top: 2.5rem;
+        }
+        .skills h4 {
+            font-size: 1.125rem;
+            margin-bottom: 1.25rem;
+            color: var(--darker);
+            font-weight: 600;
+        }
+        .skill-tags {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.75rem;
+        }
+        .skill-tag {
+            background-color: var(--primary-ultralight);
+            color: var(--primary);
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius-full);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            border: 1px solid var(--neutral);
+            text-align: center;
+            cursor: default;
+        }
+        .skill-tag:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        /* Experience Section - Timeline simplified */
+        #experience {
+            background: var(--light);
+        }
+        .experience-timeline {
+            position: relative;
+            margin-left: 1rem;
+            padding-left: 1.5rem;
+        }
         .experience-timeline::before {
             content: '';
             position: absolute;
             left: 0;
             top: 0;
-            bottom: 0;
+            height: 100%;
             width: 2px;
-            background: var(--light-gray);
+            background: var(--primary);
         }
-
         .experience-item {
             position: relative;
-            padding-left: var(--spacing-xl);
-            margin-bottom: var(--spacing-xl);
+            margin-bottom: 2rem;
+            background: var(--light-mid);
+            border-radius: var(--border-radius-lg);
+            padding: 1.75rem;
+            box-shadow: var(--shadow);
+            transition: all var(--transition-normal);
+            border: 1px solid var(--neutral);
+            overflow: hidden;
         }
-
         .experience-item::before {
             content: '';
             position: absolute;
-            left: -6px;
-            top: 0;
-            width: 14px;
-            height: 14px;
+            left: -1rem;
+            top: 2rem;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background: var(--gradient-primary);
+            background: var(--primary);
+            border: 3px solid var(--light);
         }
-
-        .experience-date {
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: var(--spacing-xs);
-            font-size: 0.875rem;
+        .experience-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
         }
-
-        .experience-content {
-            background: var(--white);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-sm);
-        }
-
-        /* Publication Section */
-        #publication {
-            background: var(--white);
-        }
-
-        .publication-card {
-            max-width: 800px;
-            margin: 0 auto;
-            border-left: 4px solid var(--primary);
-        }
-
-        .publication-header {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .publication-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--spacing-md);
-            margin: var(--spacing-md) 0;
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-            color: var(--dark-gray);
-            font-size: 0.875rem;
-        }
-
-        .authors-list {
-            color: var(--dark-gray);
-            line-height: 1.8;
-            margin: var(--spacing-md) 0;
-        }
-
-        .abstract {
-            background: var(--light);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md);
-            margin: var(--spacing-lg) 0;
-        }
-
-        .abstract-title {
-            color: var(--dark);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        /* Projects Section */
-        #projects {
-            background: var(--light);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-xl);
-        }
-
-        .project-card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-image {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-            border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
-        }
-
-        .project-content {
-            padding: var(--spacing-lg);
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-title {
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .project-description {
-            flex: 1;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .project-metrics {
+        .experience-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-top: auto;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
         }
-
-        .accuracy {
+        .experience-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--darker);
+        }
+        .experience-company {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 500;
             display: flex;
             align-items: center;
-            gap: var(--spacing-xs);
-            font-weight: 600;
+            gap: 0.5rem;
+        }
+        .experience-date {
+            color: var(--neutral-dark);
+            font-size: 0.875rem;
+            white-space: nowrap;
+            background: var(--neutral);
+            padding: 0.375rem 0.75rem;
+            border-radius: var(--border-radius-full);
+            font-weight: 500;
+        }
+        .experience-summary {
+            color: var(--dark);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .experience-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        .experience-item.active .experience-details {
+            max-height: 1000px;
+        }
+        .experience-bullets {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 1.5rem;
+        }
+        .experience-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        .experience-bullets li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
             color: var(--primary);
+            font-weight: bold;
+            font-size: 1rem;
         }
-
-        /* DAS MedHub Section */
-        #das {
-            background: var(--white);
-        }
-
-        .das-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xxl);
+        .read-more {
+            color: var(--primary);
+            font-weight: 500;
+            display: inline-flex;
             align-items: center;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--primary-ultralight);
+            border-radius: var(--border-radius-full);
+            transition: all var(--transition-fast);
+            cursor: pointer;
         }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-            margin: var(--spacing-xl) 0;
+        .read-more:hover {
+            background: var(--primary-light);
         }
-
-        .feature {
-            text-align: center;
-            padding: var(--spacing-lg);
-            background: var(--light);
-            border-radius: var(--border-radius-md);
+        .read-more i {
+            transition: transform 0.3s ease;
         }
-
-        .feature-icon {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: var(--spacing-md);
+        .experience-item.active .read-more i {
+            transform: rotate(180deg);
         }
-
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, var(--primary-soft) 0%, var(--light) 100%);
+        /* DAS Section - Balanced layout */
+        .das-section {
+            background: var(--primary-ultralight);
+            padding: var(--spacing-3xl) 0;
         }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xxl);
-        }
-
-        .contact-info {
+        .das-container {
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-lg);
+            gap: 2.5rem;
         }
-
-        .contact-item {
+        .das-image {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-normal);
+        }
+        .das-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        .das-image:hover img {
+            transform: scale(1.02);
+        }
+        .das-content h2 {
+            font-size: clamp(1.75rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+            color: var(--darker);
+            font-weight: 700;
+        }
+        .das-content p {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        .das-features {
+            margin: 2rem 0;
+        }
+        .feature-item {
             display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-            padding: var(--spacing-md);
-            background: var(--white);
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
             border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-fast);
+            background: var(--light);
+            border: 1px solid var(--neutral);
         }
-
-        .contact-icon {
-            width: 48px;
-            height: 48px;
+        .feature-item:hover {
+            background: var(--primary-ultralight);
+            transform: translateX(3px);
+        }
+        .feature-icon {
+            width: 45px;
+            height: 45px;
             background: var(--gradient-primary);
-            border-radius: var(--border-radius-sm);
+            border-radius: var(--border-radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            font-size: 1.25rem;
+            margin-right: 1rem;
+            color: white;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            box-shadow: var(--shadow);
         }
-
-        .form-group {
-            margin-bottom: var(--spacing-lg);
+        .feature-text h4 {
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+            color: var(--darker);
         }
-
-        .form-label {
-            display: block;
-            margin-bottom: var(--spacing-xs);
+        .feature-text p {
+            font-size: 0.95rem;
+            color: var(--neutral-dark);
+            margin: 0;
+            line-height: 1.5;
+        }
+        /* Projects Section - Clean grid */
+        #projects {
+            background: var(--light-mid);
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: var(--light);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--neutral);
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .project-img {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .project-img img {
+            transform: scale(1.05);
+        }
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 148, 136, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .project-info {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-info h3 {
+            font-size: 1.125rem;
+            color: var(--darker);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .project-info p {
+            font-size: 0.95rem;
+            color: var(--neutral-dark);
+            margin-bottom: auto;
+            line-height: 1.6;
+        }
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        .project-accuracy {
+            display: flex;
+            align-items: center;
+            font-size: 0.875rem;
+            color: var(--neutral-dark);
             font-weight: 500;
-            color: var(--dark);
         }
-
-        .form-input {
+        .accuracy-bar {
+            width: 70px;
+            height: 6px;
+            background-color: var(--neutral);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-right: 0.5rem;
+        }
+        .accuracy-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: var(--gradient-primary);
+        }
+        /* Publications Section - New, clean list */
+        #publications {
+            background: var(--light);
+        }
+        .publications-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 800px;
+        }
+        .publication-card {
+            background: var(--light-mid);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--neutral);
+            transition: all var(--transition-normal);
+        }
+        .publication-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .publication-card h3 {
+            font-size: 1.25rem;
+            color: var(--darker);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .publication-card .authors {
+            font-size: 0.95rem;
+            color: var(--neutral-dark);
+            margin-bottom: 0.75rem;
+            font-style: italic;
+        }
+        .publication-card .details {
+            font-size: 0.9rem;
+            color: var(--neutral-dark);
+            margin-bottom: 1rem;
+        }
+        .publication-card a {
+            font-weight: 500;
+            color: var(--primary);
+        }
+        .publication-card a:hover {
+            text-decoration: underline;
+        }
+        /* Contact Section - Balanced grid */
+        #contact {
+            background: var(--light-mid);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+        .contact-info, .contact-form {
+            background: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: clamp(2rem, 4vw, 2.5rem);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--neutral);
+        }
+        .contact-info h3, .contact-form h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--darker);
+        }
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: var(--border-radius-md);
+            transition: all var(--transition-fast);
+            background: var(--light-mid);
+            border: 1px solid var(--neutral);
+        }
+        .contact-method:hover {
+            background: var(--primary-ultralight);
+            transform: translateX(3px);
+        }
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: white;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .contact-details h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: var(--darker);
+        }
+        .contact-details p {
+            font-size: 0.95rem;
+            color: var(--neutral-dark);
+            margin: 0;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--darker);
+            font-size: 0.95rem;
+        }
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 0.875rem 1rem;
-            border: 1px solid var(--gray);
-            border-radius: var(--border-radius-sm);
-            font-family: var(--font-body);
+            border: 1px solid var(--neutral);
+            border-radius: var(--border-radius-md);
             font-size: 1rem;
             transition: all var(--transition-fast);
+            background: var(--light);
         }
-
-        .form-input:focus {
+        .form-group input:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(10, 92, 138, 0.1);
+            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
         }
-
-        textarea.form-input {
-            min-height: 150px;
+        .form-group textarea {
+            height: 120px;
             resize: vertical;
         }
-
-        /* Footer */
+        .error-message {
+            color: var(--error);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        /* Footer - Compact */
         footer {
-            background: var(--secondary);
-            color: var(--white);
-            padding: var(--spacing-xxl) 0 var(--spacing-lg);
+            background-color: var(--darker);
+            color: #94a3b8;
+            padding: 3rem 0 1.5rem;
         }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-xxl);
-            margin-bottom: var(--spacing-xxl);
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
-
         .footer-logo {
             margin-bottom: 1.5rem;
         }
@@ -693,396 +991,487 @@
             max-height: 45px;
             filter: brightness(0) invert(1);
         }
-
-        .footer-description {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: var(--spacing-lg);
+        .footer-text {
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
-
         .social-links {
             display: flex;
-            gap: var(--spacing-md);
+            gap: 1rem;
+            margin: 1.5rem 0;
+            justify-content: center;
         }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
+        .social-icon {
+            width: 44px;
+            height: 44px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            transition: all var(--transition);
+            color: #94a3b8;
+            transition: all var(--transition-fast);
+            font-size: 1.1rem;
         }
-
-        .social-link:hover {
+        .social-icon:hover {
             background: var(--primary);
-            transform: translateY(-3px);
+            color: white;
+            transform: translateY(-2px);
         }
-
         .footer-links {
             display: flex;
-            flex-direction: column;
-            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
-
         .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            transition: color var(--transition);
+            color: #94a3b8;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+            font-size: 0.9rem;
         }
-
         .footer-links a:hover {
-            color: var(--white);
+            color: white;
         }
-
         .copyright {
-            text-align: center;
-            padding-top: var(--spacing-lg);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
+            width: 100%;
             font-size: 0.875rem;
+            color: #64748b;
         }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero-grid,
-            .about-grid,
-            .das-grid,
+        /* Back to top - Subtle */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            z-index: 999;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        /* Responsive */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 2rem;
+            }
+            .profile-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .experience-highlights {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .skill-tags {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            }
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
             .contact-grid {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-xl);
+                grid-template-columns: repeat(2, 1fr);
             }
-            
-            .hero-image {
-                order: -1;
+            .das-container {
+                flex-direction: row;
+                align-items: center;
+                gap: 3rem;
+            }
+            .das-image {
+                flex: 1;
+            }
+            .das-content {
+                flex: 1;
             }
         }
-
+        @media (min-width: 992px) {
+            .profile-header {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .profile-image {
+                margin-right: 2.5rem;
+                margin-bottom: 0;
+            }
+            .profile-details {
+                flex: 1;
+            }
+            .profile-actions {
+                justify-content: flex-start;
+            }
+            .section-title {
+                font-size: 2.5rem;
+            }
+            .experience-timeline {
+                margin-left: 2rem;
+                padding-left: 2.5rem;
+            }
+            .experience-item::before {
+                left: -2rem;
+                width: 16px;
+                height: 16px;
+            }
+        }
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
                 top: 0;
                 left: -100%;
+                flex-direction: column;
+                background-color: var(--light);
                 width: 80%;
                 max-width: 300px;
                 height: 100vh;
-                background: var(--white);
-                flex-direction: column;
-                padding: var(--spacing-xxl) var(--spacing-xl);
-                box-shadow: var(--shadow-lg);
-                transition: left var(--transition);
+                text-align: left;
+                transition: left 0.3s ease;
+                box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+                padding: 5rem 2rem 2rem;
                 z-index: 999;
             }
-            
             .nav-links.active {
                 left: 0;
             }
-            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            .nav-links a {
+                font-size: 1.1rem;
+                color: var(--dark) !important;
+            }
             .mobile-menu {
                 display: block;
-                z-index: 1000;
             }
-            
-            .hero-stats {
-                grid-template-columns: 1fr;
+            .mobile-menu.active .bar:nth-child(1) {
+                transform: translateY(6px) rotate(45deg);
             }
-            
-            .section-header {
-                margin-bottom: var(--spacing-xl);
+            .mobile-menu.active .bar:nth-child(2) {
+                opacity: 0;
             }
-            
+            .mobile-menu.active .bar:nth-child(3) {
+                transform: translateY(-6px) rotate(-45deg);
+            }
+            .profile-actions {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
             section {
-                padding: var(--spacing-xl) 0;
+                padding: var(--spacing-xxl) 0;
             }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 var(--spacing-md);
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
             }
-            
-            .card {
-                padding: var(--spacing-lg);
+            .experience-date {
+                margin-left: 0;
+                margin-top: 0.5rem;
             }
-            
-            .feature-grid {
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .experience-highlights {
                 grid-template-columns: 1fr;
             }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .skill-tags {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
         }
-
-        /* Animation Classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: var(--spacing-lg);
-            right: var(--spacing-lg);
-            width: 48px;
-            height: 48px;
-            background: var(--gradient-primary);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: all var(--transition);
-            box-shadow: var(--shadow);
-            z-index: 999;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
+        @media (max-width: 576px) {
+            .profile-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+            }
+            .stat-item {
+                padding: 0.75rem;
+            }
+            .stat-number {
+                font-size: 1.25rem;
+            }
+            .das-content h2 {
+                font-size: 1.75rem;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .skill-tags {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header id="header">
-<nav class="container">
+    <header id="main-header">
+        <nav class="container">
             <a href="#hero" class="logo">
                 <img src="images/logodas-removebg-preview.png" alt="DAS Medhub Logo" class="logo-img">
             </a>
             <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#publication">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#das">DAS MedHub</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </nav>
     </header>
-
     <!-- Hero Section -->
     <section id="hero">
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <span class="hero-badge">AI Healthcare Innovator</span>
-                    <h1 class="h1">Divine Sebukpor</h1>
-                    <p class="h4" style="color: var(--dark); margin-bottom: var(--spacing-lg);">
-                        Transforming healthcare through AI-powered diagnostics and ethical innovation
-                    </p>
-                    <p style="color: var(--dark-gray); margin-bottom: var(--spacing-xl);">
-                        Founder & CEO of DAS MedHub, AI Researcher, and Healthcare Innovator focused on making 
-                        diagnostics accessible, accurate, and affordable for underserved communities.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            Get In Touch
-                        </a>
-                        <a href="#projects" class="btn btn-secondary">
-                            <i class="fas fa-code"></i>
-                            View Projects
-                        </a>
+            <div class="hero-content">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <img src="images/Divine2.png" alt="Divine Sebukpor" class="profile-image">
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">6+</div>
-                            <div class="stat-label">AI Projects</div>
+                    <div class="profile-details">
+                        <h1 class="profile-title">Divine Sebukpor</h1>
+                        <p class="profile-subtitle">AI Researcher & Healthcare Innovator</p>
+                        <p class="profile-tagline">Transforming global healthcare through AI-powered diagnostics and ethical innovation</p>
+                        <div class="profile-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Accra, Ghana</span>
                         </div>
-                        <div class="stat">
-                            <div class="stat-number">99%</div>
-                            <div class="stat-label">Accuracy</div>
+                        <div class="profile-actions">
+                            <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Info</a>
+                            <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/" class="btn"><i class="fab fa-linkedin-in"></i> Connect</a>
+                            <a href="#projects" class="btn btn-dark"><i class="fas fa-code"></i> View Projects</a>
                         </div>
-                        <div class="stat">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Roles</div>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">6+</div>
+                                <div class="stat-label">AI Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">4+</div>
+                                <div class="stat-label">Roles</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">99%</div>
+                                <div class="stat-label">Accuracy</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="images/Divine2.png" alt="Divine Sebukpor" class="profile-image">
+                <div class="experience-highlights">
+                    <div class="experience-card" data-target="founder">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Founder & CEO</h3>
+                        <p>Leading DAS MedHub in healthcare AI innovation</p>
+                    </div>
+                    <div class="experience-card" data-target="ambassador">
+                        <i class="fas fa-microphone"></i>
+                        <h3>Ambassador</h3>
+                        <p>Representing Extern in ethical AI discussions</p>
+                    </div>
+                    <div class="experience-card" data-target="researcher">
+                        <i class="fas fa-flask"></i>
+                        <h3>Research Analyst</h3>
+                        <p>Conducting AI bias analysis in healthcare</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="hero-scroll" onclick="scrollToSection('about')">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </section>
-
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title h2">About Me</h2>
-                <p class="section-subtitle">
-                    AI researcher, ambassador, and youth healthtech entrepreneur passionate about leveraging data, 
-                    evidence, and inclusive evaluation to advance global healthcare and equity.
-                </p>
-            </div>
-            <div class="about-grid">
-                <div class="card">
-                    <h3 class="h4" style="margin-bottom: var(--spacing-lg);">My Vision</h3>
-                    <p>
-                        I'm committed to developing cutting-edge AI solutions that make healthcare more accessible, 
-                        accurate, and affordable for everyone, especially in underserved communities across Africa 
-                        and beyond.
-                    </p>
-                    <p>
-                        Through my work at DAS MedHub and various research initiatives, I focus on creating 
-                        sustainable, ethical AI systems that can transform healthcare delivery while addressing 
-                        critical issues of bias and accessibility.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="h4" style="margin-bottom: var(--spacing-lg);">Core Competencies</h3>
-                    <div class="skills-grid">
-                        <span class="skill-tag">AI Diagnostics</span>
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Healthcare Innovation</span>
-                        <span class="skill-tag">Ethical AI</span>
-                        <span class="skill-tag">Research Analysis</span>
-                        <span class="skill-tag">Youth Mentorship</span>
-                        <span class="skill-tag">Global Health</span>
-                        <span class="skill-tag">Project Management</span>
-                        <span class="skill-tag">LLM Integration</span>
-                        <span class="skill-tag">Strategic Partnerships</span>
-                        <span class="skill-tag">Public Speaking</span>
-                        <span class="skill-tag">Data Science</span>
+            <h2 class="section-title">About</h2>
+            <p class="section-subtitle">AI researcher, ambassador, and youth healthtech entrepreneur passionate about leveraging data, evidence, and inclusive evaluation to advance global healthcare and equity.</p>
+            <div class="about-card">
+                <div class="about-text">
+                    <p>I'm an AI researcher, ambassador, and youth healthtech entrepreneur passionate about leveraging data, evidence, and inclusive evaluation to advance global healthcare and equity. With extensive experience in AI-driven diagnostics, ethical risk assessments, and youth mentorship, I'm committed to evidence-based decision-making and amplifying youth voices in global development.</p>
+                    <p>My work focuses on developing cutting-edge AI solutions that make healthcare more accessible, accurate, and affordable for everyone, especially in underserved communities across Africa and beyond.</p>
+                    <div class="skills">
+                        <h4>Core Competencies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AI Diagnostics</span>
+                            <span class="skill-tag">Healthcare Innovation</span>
+                            <span class="skill-tag">Ethical AI</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Youth Mentorship</span>
+                            <span class="skill-tag">Global Health</span>
+                            <span class="skill-tag">LLM Integration</span>
+                            <span class="skill-tag">Strategic Partnerships</span>
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Research</span>
+                            <span class="skill-tag">Public Speaking</span>
+                            <span class="skill-tag">Project Management</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title h2">Professional Experience</h2>
-                <p class="section-subtitle">
-                    A journey through my professional roles and contributions to healthcare AI innovation
-                </p>
-            </div>
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">A journey through my professional roles and contributions to healthcare AI innovation</p>
             <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-date">Present</div>
-                    <div class="experience-content card">
-                        <h3 class="h4">Founder & CEO</h3>
-                        <p class="experience-company">DAS MedHub</p>
-                        <p>
-                            Leading a healthtech startup focused on developing AI-powered diagnostic solutions 
-                            for global healthcare challenges with 96-99% accuracy across multiple disease domains.
-                        </p>
+                <!-- Founder Experience -->
+                <div class="experience-item" id="founder-exp">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Founder (CEO) & AI Researcher</h3>
+                            <div class="experience-company">DAS MedHub</div>
+                        </div>
+                        <div class="experience-date">Present</div>
                     </div>
+                    <div class="experience-summary">
+                        Leading a healthtech startup focused on developing AI-powered diagnostic solutions for global healthcare challenges.
+                    </div>
+                    <div class="experience-details">
+                        <ul class="experience-bullets">
+                            <li>Designed and deployed AI-powered diagnostic models for diabetes, pneumonia, malaria, and multi-cancer detection, improving accessibility in low-resource settings.</li>
+                            <li>Integrated Large Language Models (LLMs) for patient symptom assessment, enhancing diagnostic accuracy.</li>
+                            <li>Built partnerships to drive AI adoption in African healthcare systems.</li>
+                            <li>Secured funding and grants for research and development initiatives.</li>
+                            <li>Led a team of developers and researchers in creating innovative healthcare solutions.</li>
+                        </ul>
+                    </div>
+                    <span class="read-more">Read more <i class="fas fa-chevron-down"></i></span>
                 </div>
-                <div class="experience-item">
-                    <div class="experience-date">Present</div>
-                    <div class="experience-content card">
-                        <h3 class="h4">Ambassador</h3>
-                        <p class="experience-company">Extern</p>
-                        <p>
-                            Representing Extern as a youth ambassador, engaging peers globally on ethical AI, 
-                            innovation, and social impact through workshops and speaking engagements.
-                        </p>
+                <!-- Ambassador Experience -->
+                <div class="experience-item" id="ambassador-exp">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Ambassador</h3>
+                            <div class="experience-company">Extern</div>
+                        </div>
+                        <div class="experience-date">Present</div>
                     </div>
+                    <div class="experience-summary">
+                        Representing Extern as a youth ambassador, engaging peers globally on ethical AI, innovation, and social impact.
+                    </div>
+                    <div class="experience-details">
+                        <ul class="experience-bullets">
+                            <li>Represent Extern as a youth ambassador, engaging peers globally on ethical AI, innovation, and social impact.</li>
+                            <li>Support initiatives to elevate youth perspectives in research, evaluation, and evidence-driven solutions.</li>
+                            <li>Organize workshops and speaking events on responsible AI development.</li>
+                            <li>Collaborate with international organizations to promote ethical AI standards.</li>
+                        </ul>
+                    </div>
+                    <span class="read-more">Read more <i class="fas fa-chevron-down"></i></span>
                 </div>
-                <div class="experience-item">
-                    <div class="experience-date">Jun 2024 – Aug 2024</div>
-                    <div class="experience-content card">
-                        <h3 class="h4">Research Analyst (Externship)</h3>
-                        <p class="experience-company">NRG Group / Extern</p>
-                        <p>
-                            Conducted AI bias analysis and risk assessments in healthcare and genomics to ensure 
-                            equitable outcomes and contributed to ethical frameworks and mitigation strategies.
-                        </p>
+                <!-- Research Analyst Experience -->
+                <div class="experience-item" id="researcher-exp">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Research Analyst (Externship)</h3>
+                            <div class="experience-company">NRG Group / Extern</div>
+                        </div>
+                        <div class="experience-date">Jun 2024 – Aug 2024</div>
                     </div>
+                    <div class="experience-summary">
+                        Conducted AI bias analysis and risk assessments in healthcare and genomics to ensure equitable outcomes.
+                    </div>
+                    <div class="experience-details">
+                        <ul class="experience-bullets">
+                            <li>Conducted AI bias analysis and risk assessments in healthcare and genomics.</li>
+                            <li>Contributed to ethical frameworks and mitigation strategies to reduce bias and ensure equitable outcomes.</li>
+                            <li>Conducted research on AI ethics in healthcare applications.</li>
+                            <li>Developed auditing tools for identifying bias in machine learning models.</li>
+                        </ul>
+                    </div>
+                    <span class="read-more">Read more <i class="fas fa-chevron-down"></i></span>
                 </div>
-                <div class="experience-item">
-                    <div class="experience-date">Present</div>
-                    <div class="experience-content card">
-                        <h3 class="h4">Project Manager</h3>
-                        <p class="experience-company">Andeda – Data Analysis & Consulting</p>
-                        <p>
-                            Leading data-driven projects, overseeing analytics and consulting initiatives that 
-                            help organizations transform insights into actionable strategies.
-                        </p>
+                <!-- Project Manager Experience -->
+                <div class="experience-item" id="andeda-exp">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Project Manager</h3>
+                            <div class="experience-company">Andeda – Data Analysis & Consulting</div>
+                        </div>
+                        <div class="experience-date">Present</div>
                     </div>
+                    <div class="experience-summary">
+                        Leading data-driven projects at Andeda, overseeing analytics and consulting initiatives that help organizations transform insights into actionable strategies.
+                    </div>
+                    <div class="experience-details">
+                        <ul class="experience-bullets">
+                            <li>Manage cross-functional teams to deliver data analysis and consulting projects on time and within scope.</li>
+                            <li>Collaborate with clients to define requirements, align objectives, and translate business needs into technical solutions.</li>
+                            <li>Oversee end-to-end project lifecycle from data collection and preprocessing to reporting and visualization.</li>
+                            <li>Implement project management best practices to improve efficiency, communication, and client satisfaction.</li>
+                            <li>Present findings and actionable insights to executives and stakeholders, enabling data-driven decision-making.</li>
+                        </ul>
+                    </div>
+                    <span class="read-more">Read more <i class="fas fa-chevron-down"></i></span>
                 </div>
+                <!-- Community Mentor Experience -->
                 <div class="experience-item">
-                    <div class="experience-date">Present</div>
-                    <div class="experience-content card">
-                        <h3 class="h4">Community Mentor</h3>
-                        <p class="experience-company">ALX Africa</p>
-                        <p>
-                            Mentoring aspiring AI practitioners on research, ethics, and healthcare applications, 
-                            organizing workshops and peer-learning sessions to strengthen youth-led innovation.
-                        </p>
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Community Mentor</h3>
+                            <div class="experience-company">ALX Africa</div>
+                        </div>
+                        <div class="experience-date">Present</div>
                     </div>
+                    <div class="experience-summary">
+                        Mentoring aspiring AI practitioners on research, ethics, and healthcare applications.
+                    </div>
+                    <div class="experience-details">
+                        <ul class="experience-bullets">
+                            <li>Mentored aspiring AI practitioners on research, ethics, and healthcare applications.</li>
+                            <li>Organized workshops and peer-learning sessions to strengthen youth-led innovation and capacity-building.</li>
+                            <li>Guided students through real-world healthcare AI project development.</li>
+                        </ul>
+                    </div>
+                    <span class="read-more">Read more <i class="fas fa-chevron-down"></i></span>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Publication Section -->
-    <section id="publication">
+    <!-- Publications Section -->
+    <section id="publications">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title h2">Recent Publication</h2>
-                <p class="section-subtitle">
-                    Cutting-edge research in AI-powered medical diagnostics
-                </p>
-            </div>
-            <div class="card publication-card">
-                <div class="publication-header">
-                    <h3 class="h3" style="color: var(--primary); margin-bottom: var(--spacing-sm);">
-                        Browser-Based Multi-Cancer Classification Framework Using Depthwise Separable Convolutions for Precision Diagnostics
-                    </h3>
-                    <div class="publication-meta">
-                        <span class="meta-item">
-                            <i class="fas fa-calendar"></i>
-                            <span>2025</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-book"></i>
-                            <span>Diagnostics, 15(23), 3066</span>
-                        </span>
-                        <span class="meta-item">
-                            <i class="fas fa-link"></i>
-                            <a href="https://doi.org/10.3390/diagnostics15233066" style="color: var(--primary);">
-                                https://doi.org/10.3390/diagnostics15233066
-                            </a>
-                        </span>
-                    </div>
-                    <div class="authors-list">
-                        <strong>Authors:</strong> Divine Sebukpor<sup>1</sup>, Ikenna Odezuligbo<sup>2,*</sup>, 
-                        Maimuna Nagey<sup>3</sup>, Michael Chukwuka<sup>4</sup>, Oluwamayowa Akinsuyi<sup>5</sup>, 
-                        Blessing Ndubuisi<sup>6</sup>
-                    </div>
-                    <!--<div style="margin-top: var(--spacing-md); color: var(--dark-gray);">
-                        <p><strong>Affiliations:</strong></p>
-                        <p><sup>1</sup> Department of Computer Science and Engineering, Chandigarh University, Mohali 140413, India</p>
-                        <p><sup>2</sup> Department of Physics, Creighton University, Omaha, NE 68131, USA</p>
-                        <p><sup>3</sup> Department of Medical Physics, Creighton University, Omaha, NE 68131, USA</p>
-                        <p><sup>4</sup> Department of Physics and Astronomy, University of Kansas, Lawrence, KS 66045, USA</p>
-                    </div>-->
-                </div>
-                <div class="abstract">
-                    <h4 class="abstract-title h5">Abstract</h4>
+            <h2 class="section-title">Publications</h2>
+            <p class="section-subtitle">Peer-reviewed research advancing AI in healthcare diagnostics</p>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <h3>Browser-Based Multi-Cancer Classification Framework Using Depthwise Separable Convolutions for Precision Diagnostics</h3>
+                    <p class="authors">Divine Sebukpor<sup>1</sup>, Ikenna Odezuligbo<sup>2,*</sup>, Maimuna Nagey<sup>3</sup>, Michael Chukwuka<sup>4</sup>, Oluwamayowa Akinsuyi<sup>5</sup> and Blessing Ndubuisi<sup>6</sup></p>
+                    <p class="details">
+     <h4 class="abstract-title h5">Abstract</h4>
                     <p>
    Background: Early and accurate cancer detection remains a critical challenge in global healthcare. 
    Deep learning has shown strong diagnostic potential, yet widespread adoption is limited by dependence on high-performance hardware, centralized servers, and data-privacy risks
@@ -1096,459 +1485,369 @@ It was benchmarked against VGG16, ResNet50, EfficientNet-B0, and Vision Transfor
 Grad-CAM visualizations confirmed that predictions were guided by histopathologically relevant regions, reinforcing interpretability and clinical trust. Conclusions: This work represents the first fully browser-deployable, privacy-preserving deep learning framework for multi-cancer diagnosis, demonstrating that high-accuracy AI can be achieved without infrastructure overhead. 
 It establishes a practical pathway for equitable, cost-effective global deployment of medical AI tools.
                     </p>
+                    <p class="details">Diagnostics 2025, 15(23), 3066; <a href="https://doi.org/10.3390/diagnostics15233066" target="_blank">https://doi.org/10.3390/diagnostics15233066</a></p>
+                    <p class="details">This article belongs to the Special Issue Artificial Intelligence-Driven Radiomics in Medical Diagnosis</p>
                 </div>
-                <div style="margin-top: var(--spacing-lg);">
-                    <a href="https://doi.org/10.3390/diagnostics15233066" class="btn btn-primary" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                        Read Full Paper
+            </div>
+        </div>
+    </section>
+    <!-- DAS MedHub Section -->
+    <section id="das" class="das-section">
+        <div class="container">
+            <h2 class="section-title">DAS MedHub</h2>
+            <p class="section-subtitle">
+                Revolutionizing healthcare through AI-powered diagnostics for Africa and beyond
+            </p>
+            <div class="das-container">
+                <div class="das-image">
+                    <img src="images/perfect.png" alt="DAS MedHub AI Healthcare Platform">
+                </div>
+                <div class="das-content">
+                    <h2>Transforming Healthcare with AI Innovation</h2>
+                    <p>
+                        DAS MedHub is a healthtech startup committed to advancing medical diagnostics
+                        through cutting-edge artificial intelligence. Our mission is to make healthcare
+                        more <strong>accessible, accurate, and affordable</strong>, with a special focus
+                        on underserved communities across Africa. By leveraging AI, we empower
+                        healthcare professionals to deliver faster and more reliable diagnoses.
+                    </p>
+                    <div class="das-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>AI-Powered Diagnostics</h4>
+                                <p>
+                                    State-of-the-art machine learning models delivering disease detection
+                                    accuracy rates of <strong>96–99%</strong>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-globe-africa"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Tailored for Africa & Beyond</h4>
+                                <p>
+                                    Built to address healthcare disparities and optimized for
+                                    <strong>resource-limited environments</strong>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Accessible & Affordable Care</h4>
+                                <p>
+                                    Bringing world-class diagnostic tools within reach of
+                                    patients and healthcare providers in low-resource settings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="http://www.dasmedhub.com/" target="_blank" class="btn btn-accent">
+                        <i class="fas fa-external-link-alt"></i> Learn More About DAS MedHub
                     </a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title h2">AI Projects</h2>
-                <p class="section-subtitle">
-                    A showcase of healthcare AI projects with real-world impact and high accuracy rates
-                </p>
-            </div>
+            <h2 class="section-title">AI Projects</h2>
+            <p class="section-subtitle">A showcase of my healthcare AI projects with real-world impact and high accuracy rates</p>
             <div class="projects-grid">
-                <!-- Diabetes Prediction -->
-                <div class="card project-card">
-                    <img src="images/R.jpeg" alt="Diabetes Prediction" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title h4">Diabetes Prediction</h3>
-                        <p class="project-description">
-                            AI model analyzing patient medical data to predict diabetes risk with exceptional 
-                            accuracy for early intervention and prevention.
-                        </p>
-                        <div class="project-metrics">
-                            <span class="accuracy">
-                                <i class="fas fa-chart-line"></i>
-                                96% Accuracy
-                            </span>
-                            <a href="https://models.dasmedhub.com/" class="btn btn-primary btn-sm">View</a>
+                <!-- Diabetes Model -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/R.jpeg" alt="Diabetes Prediction Model">
+                        <div class="project-overlay">
+                            <a href="https://models.dasmedhub.com/" class="btn btn-sm">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Diabetes Prediction</h3>
+                        <p>An advanced AI model that analyzes patient medical data to predict diabetes risk with exceptional accuracy, helping in early intervention and prevention strategies.</p>
+                        <div class="project-meta">
+                            <div class="project-accuracy">
+                                <div class="accuracy-bar">
+                                    <div class="accuracy-fill" style="width: 96%"></div>
+                                </div>
+                                <span>96%</span>
+                            </div>
+                            <a href="https://models.dasmedhub.com/" class="btn btn-dark btn-sm">View</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Chest Abnormality Detection -->
-                <div class="card project-card">
-                    <img src="images/OIP (1).jpeg" alt="Chest Abnormality Detection" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title h4">Chest Abnormality Detection</h3>
-                        <p class="project-description">
-                            CNN analyzing chest X-rays to identify 14 different abnormalities with high 
-                            precision, reducing diagnostic time.
-                        </p>
-                        <div class="project-metrics">
-                            <span class="accuracy">
-                                <i class="fas fa-chart-line"></i>
-                                96% Accuracy
-                            </span>
-                            <a href="https://models.dasmedhub.com/" class="btn btn-primary btn-sm">View</a>
+                <!-- Chest Abnormality Model -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/OIP (1).jpeg" alt="Chest Abnormality Detection Model">
+                        <div class="project-overlay">
+                            <a href="https://models.dasmedhub.com/" class="btn btn-sm">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Chest Abnormality Detection</h3>
+                        <p>A convolutional neural network that analyzes chest X-rays to identify 14 different abnormalities with high precision, reducing diagnostic time and improving accuracy.</p>
+                        <div class="project-meta">
+                            <div class="project-accuracy">
+                                <div class="accuracy-bar">
+                                    <div class="accuracy-fill" style="width: 96%"></div>
+                                </div>
+                                <span>96%</span>
+                            </div>
+                            <a href="https://models.dasmedhub.com/" class="btn btn-dark btn-sm">View</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Malaria Detection -->
-                <div class="card project-card">
-                    <img src="images/R (1).jpeg" alt="Malaria Detection" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title h4">Malaria Detection</h3>
-                        <p class="project-description">
-                            Deep learning model analyzing blood smear images to accurately detect malaria 
-                            parasites for rapid diagnosis.
-                        </p>
-                        <div class="project-metrics">
-                            <span class="accuracy">
-                                <i class="fas fa-chart-line"></i>
-                                97% Accuracy
-                            </span>
-                            <a href="https://models.dasmedhub.com/" class="btn btn-primary btn-sm">View</a>
+                <!-- Malaria Model -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/R (1).jpeg" alt="Malaria Detection Model">
+                        <div class="project-overlay">
+                            <a href="https://models.dasmedhub.com/" class="btn btn-sm">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Malaria Detection</h3>
+                        <p>A deep learning model that analyzes blood smear images to accurately detect malaria parasites, providing rapid diagnosis in resource-limited settings.</p>
+                        <div class="project-meta">
+                            <div class="project-accuracy">
+                                <div class="accuracy-bar">
+                                    <div class="accuracy-fill" style="width: 97%"></div>
+                                </div>
+                                <span>97%</span>
+                            </div>
+                            <a href="https://models.dasmedhub.com/" class="btn btn-dark btn-sm">View</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Multi-Cancer Detection -->
-                <div class="card project-card">
-                    <img src="images/ldc.png" alt="Multi-Cancer Detection" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title h4">Multi-Cancer Detection</h3>
-                        <p class="project-description">
-                            Advanced deep learning model identifying 26 different cancer types from medical 
-                            imaging and biomarker patterns.
-                        </p>
-                        <div class="project-metrics">
-                            <span class="accuracy">
-                                <i class="fas fa-chart-line"></i>
-                                99% Accuracy
-                            </span>
-                            <a href="https://models.dasmedhub.com/" class="btn btn-primary btn-sm">View</a>
+                <!-- Cancer Model -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/ldc.png" alt="Multi-Cancer Detection Model">
+                        <div class="project-overlay">
+                            <a href="https://models.dasmedhub.com/" class="btn btn-sm">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Multi-Cancer Detection</h3>
+                        <p>Advanced deep learning model that identifies 26 different types of cancer from various medical imaging modalities and biomarker patterns.</p>
+                        <div class="project-meta">
+                            <div class="project-accuracy">
+                                <div class="accuracy-bar">
+                                    <div class="accuracy-fill" style="width: 99%"></div>
+                                </div>
+                                <span>99%</span>
+                            </div>
+                            <a href="https://models.dasmedhub.com/" class="btn btn-dark btn-sm">View</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- BioTrace -->
-                <div class="card project-card">
-                    <img src="images/microbiome.jpg" alt="BioTrace" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title h4">BioTrace</h3>
-                        <p class="project-description">
-                            Neural network predicting body site origin of microbiome samples with exceptional 
-                            accuracy, supporting manual feature entry and FastQ uploads.
-                        </p>
-                        <div class="project-metrics">
-                            <span class="accuracy">
-                                <i class="fas fa-chart-line"></i>
-                                99% Accuracy
-                            </span>
-                            <a href="https://models.dasmedhub.com/" class="btn btn-primary btn-sm">View</a>
+                <!-- Microbiome Model -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/microbiome.jpg" alt="Microbiome Model">
+                        <div class="project-overlay">
+                            <a href="https://models.dasmedhub.com/" class="btn btn-sm">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>BioTrace</h3>
+                        <p>Neural network model that predicts the body site origin of microbiome samples with exceptional accuracy, supporting manual feature entry and FastQ file uploads.</p>
+                        <div class="project-meta">
+                            <div class="project-accuracy">
+                                <div class="accuracy-bar">
+                                    <div class="accuracy-fill" style="width: 99%"></div>
+                                </div>
+                                <span>99%</span>
+                            </div>
+                            <a href="https://models.dasmedhub.com/" class="btn btn-dark btn-sm">View</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Symptoms Assessment -->
-                <div class="card project-card">
-                    <img src="images/image-removebg-preview.png" alt="Symptoms Assessment" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title h4">Symptoms Assessment (Rose)</h3>
-                        <p class="project-description">
-                            AI-powered virtual assistant helping users assess symptoms, receive health guidance, 
-                            and make informed healthcare decisions.
-                        </p>
-                        <div class="project-metrics">
-                            <span class="accuracy">
-                                <i class="fas fa-chart-line"></i>
-                                96% Accuracy
-                            </span>
-                            <a href="https://site.dasmedhub.com/land.html" class="btn btn-primary btn-sm">View</a>
+                <!-- Symptoms Assessment Model -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/image-removebg-preview.png" alt="Symptoms Assessment Model">
+                        <div class="project-overlay">
+                            <a href="https://site.dasmedhub.com/land.html" class="btn btn-sm">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Symptoms Assessment (Rose)</h3>
+                        <p>An AI-powered virtual assistant that helps users assess symptoms, receive preliminary health guidance, and make informed healthcare decisions.</p>
+                        <div class="project-meta">
+                            <div class="project-accuracy">
+                                <div class="accuracy-bar">
+                                    <div class="accuracy-fill" style="width: 96%"></div>
+                                </div>
+                                <span>96%</span>
+                            </div>
+                            <a href="https://site.dasmedhub.com/land.html" class="btn btn-dark btn-sm">View</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- DAS MedHub Section -->
-    <section id="das">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title h2">DAS MedHub</h2>
-                <p class="section-subtitle">
-                    Revolutionizing healthcare through AI-powered diagnostics for Africa and beyond
-                </p>
-            </div>
-            <div class="das-grid">
-                <div>
-                    <div class="card" style="margin-bottom: var(--spacing-xl);">
-                        <h3 class="h3" style="margin-bottom: var(--spacing-md);">Our Mission</h3>
-                        <p>
-                            DAS MedHub is a healthtech startup committed to advancing medical diagnostics 
-                            through cutting-edge artificial intelligence. We make healthcare more 
-                            <strong>accessible, accurate, and affordable</strong>, with a special focus on 
-                            underserved communities across Africa.
-                        </p>
-                        <div style="margin-top: var(--spacing-xl);">
-                            <a href="http://www.dasmedhub.com/" target="_blank" class="btn btn-accent">
-                                <i class="fas fa-external-link-alt"></i>
-                                Visit DAS MedHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-grid">
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h4 class="h5">AI-Powered</h4>
-                            <p>State-of-the-art ML models with 96-99% accuracy</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-globe-africa"></i>
-                            </div>
-                            <h4 class="h5">Africa-Focused</h4>
-                            <p>Optimized for resource-limited environments</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-hand-holding-heart"></i>
-                            </div>
-                            <h4 class="h5">Accessible Care</h4>
-                            <p>Democratizing diagnostic tools globally</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/perfect.png" alt="DAS MedHub Platform" style="border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);">
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title h2">Get In Touch</h2>
-                <p class="section-subtitle">
-                    Interested in collaborations, research opportunities, or speaking engagements?
-                </p>
-            </div>
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Get in touch to discuss collaborations, research opportunities, or speaking engagements</p>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4 class="h5">Email</h4>
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing new collaborations, research opportunities, or speaking engagements. Feel free to reach out with any inquiries.</p>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
                             <p>divinesebukpor@gmail.com</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4 class="h5">Phone</h4>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
                             <p>+91 7626922236</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4 class="h5">Location</h4>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
                             <p>Accra, Ghana</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <h4 class="h5">Response Time</h4>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-details">
+                            <h4>Response Time</h4>
                             <p>Typically within 24 hours</p>
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <h3 class="h4" style="margin-bottom: var(--spacing-lg);">Send a Message</h3>
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
                     <form id="contactForm" action="https://formspree.io/f/xgvavbap" method="POST">
                         <div class="form-group">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-input" required>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <div class="error-message"></div>
                         </div>
                         <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-input" required></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
+                            <div class="error-message"></div>
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
+                        <button type="submit" class="btn btn-dark"><i class="fas fa-paper-plane"></i> Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-content">
                 <div class="footer-logo">
                     <img src="images/logodas-removebg-preview.png" alt="DAS Medhub Logo">
-            
-                    <p class="footer-description">
-                        Innovating healthcare through artificial intelligence to create accessible, 
-                        accurate, and affordable diagnostic solutions for everyone.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/Sebukpor" class="social-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://twitter.com/" class="social-link" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
                 </div>
-                <div>
-                    <h4 class="h5" style="margin-bottom: var(--spacing-md); color: var(--white);">Quick Links</h4>
-                    <div class="footer-links">
-                        <a href="#about">About</a>
-                        <a href="#experience">Experience</a>
-                        <a href="#publication">Publications</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#das">DAS MedHub</a>
-                        <a href="#contact">Contact</a>
-                    </div>
+                <div class="footer-text">
+                    <p>Innovating healthcare through artificial intelligence to create accessible, accurate, and affordable diagnostic solutions for everyone.</p>
                 </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Divine Sebukpor. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#das">DAS MedHub</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Sebukpor" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Divine Sebukpor. All Rights Reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
-
     <!-- Back to Top Button -->
-    <div class="back-to-top" id="backToTop">
+    <div class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </div>
-
     <script>
         // Mobile Menu Toggle
         const mobileMenu = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
-        
+        const body = document.body;
+       
         mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
             navLinks.classList.toggle('active');
-            mobileMenu.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
+            body.classList.toggle('no-scroll', navLinks.classList.contains('active'));
         });
-
         // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
                 navLinks.classList.remove('active');
-                mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                body.classList.remove('no-scroll');
             });
         });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-
-            // Back to top button
-            const backToTop = document.getElementById('backToTop');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (navLinks.classList.contains('active') &&
+                !e.target.closest('.nav-links') &&
+                !e.target.closest('.mobile-menu')) {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.classList.remove('no-scroll');
             }
         });
-
-        // Back to top functionality
-        document.getElementById('backToTop').addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const submitButton = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitButton.innerHTML;
-                
-                // Show loading state
-                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitButton.disabled = true;
-                
-                try {
-                    // Submit to Formspree
-                    const formData = new FormData(contactForm);
-                    const response = await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-                    
-                    if (response.ok) {
-                        // Show success message
-                        submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                        submitButton.style.background = '#10B981';
-                        contactForm.reset();
-                        
-                        // Reset button after 3 seconds
-                        setTimeout(() => {
-                            submitButton.innerHTML = originalText;
-                            submitButton.style.background = '';
-                            submitButton.disabled = false;
-                        }, 3000);
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                } catch (error) {
-                    // Show error message
-                    submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error';
-                    submitButton.style.background = '#EF4444';
-                    
-                    // Reset button after 3 seconds
-                    setTimeout(() => {
-                        submitButton.innerHTML = originalText;
-                        submitButton.style.background = '';
-                        submitButton.disabled = false;
-                    }, 3000);
-                }
-            });
-        }
-
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.fade-in').forEach(element => {
-            observer.observe(element);
-        });
-
-        // Smooth scroll for anchor links
+        // Smooth scrolling for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     // Close mobile menu if open
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                        mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
-                    
+                    mobileMenu.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    body.classList.remove('no-scroll');
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
@@ -1556,6 +1855,144 @@ It establishes a practical pathway for equitable, cost-effective global deployme
                 }
             });
         });
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        // Enhanced scroll animations
+        function checkScroll() {
+            const sections = document.querySelectorAll('section');
+            const backToTop = document.querySelector('.back-to-top');
+           
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+               
+                if (sectionTop < windowHeight * 0.8) {
+                    section.classList.add('visible');
+                }
+            });
+           
+            // Back to top button
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }
+        // Initialize scroll event listener
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+        // Back to top functionality
+        document.querySelector('.back-to-top')?.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                let isValid = true;
+               
+                if (!nameInput.value.trim()) {
+                    showError(nameInput, 'Please enter your name');
+                    isValid = false;
+                }
+               
+                if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+                    showError(emailInput, 'Please enter a valid email address');
+                    isValid = false;
+                }
+               
+                if (!isValid) {
+                    e.preventDefault();
+                } else {
+                    const button = contactForm.querySelector('button[type="submit"]');
+                    const originalText = button.innerHTML;
+                    button.innerHTML = "<i class='fas fa-spinner fa-spin'></i> Sending...";
+                    button.disabled = true;
+                   
+                    setTimeout(() => {
+                        button.innerHTML = originalText;
+                        button.disabled = false;
+                    }, 5000);
+                }
+            });
+        }
+        function showError(input, message) {
+            const formGroup = input.parentElement;
+            let errorElement = formGroup.querySelector('.error-message');
+           
+            if (!errorElement) {
+                errorElement = document.createElement('div');
+                errorElement.className = 'error-message';
+                formGroup.appendChild(errorElement);
+            }
+           
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+            input.style.borderColor = 'var(--error)';
+           
+            input.addEventListener('input', function() {
+                errorElement.textContent = '';
+                errorElement.style.display = 'none';
+                input.style.borderColor = '';
+            }, { once: true });
+        }
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+        // Experience card click handlers
+        const experienceCards = document.querySelectorAll('.experience-card');
+        experienceCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                const targetElement = document.getElementById(`${target}-exp`);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    setTimeout(() => {
+                        targetElement.classList.add('active');
+                        targetElement.querySelector('.read-more').innerHTML = 'Show less <i class="fas fa-chevron-up"></i>';
+                    }, 800);
+                }
+            });
+        });
+        // Experience item toggle
+        const readMoreButtons = document.querySelectorAll('.read-more');
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const experienceItem = this.parentElement;
+                experienceItem.classList.toggle('active');
+                if (experienceItem.classList.contains('active')) {
+                    this.innerHTML = 'Show less <i class="fas fa-chevron-up"></i>';
+                } else {
+                    this.innerHTML = 'Read more <i class="fas fa-chevron-down"></i>';
+                }
+            });
+        });
+        // Scroll to section function
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                window.scrollTo({
+                    top: section.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
     </script>
 </body>
 </html>
