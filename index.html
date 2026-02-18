@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divine Sebukpor | Healthcare AI Innovator</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css ">
+    <link rel="preconnect" href="https://fonts.googleapis.com ">
+    <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300 ;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* ============================================
            MODERN PREMIUM DESIGN SYSTEM
@@ -645,20 +645,6 @@
             box-shadow: var(--shadow-xl);
         }
 
-        .profile-decoration {
-            position: absolute;
-            inset: -20px;
-            border: 2px solid rgba(6, 182, 212, 0.3);
-            border-radius: var(--radius-xl);
-            z-index: 1;
-            animation: rotate-slow 20s linear infinite;
-        }
-
-        @keyframes rotate-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
         .profile-dots {
             position: absolute;
             bottom: -30px;
@@ -682,13 +668,13 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        .floating-card:nth-child(3) {
+        .floating-card:nth-child(2) {
             top: 20%;
             left: -60px;
             animation-delay: 0s;
         }
 
-        .floating-card:nth-child(4) {
+        .floating-card:nth-child(3) {
             bottom: 10%;
             right: -40px;
             animation-delay: 3s;
@@ -1315,6 +1301,39 @@
             margin-left: auto;
         }
 
+        /* Mobile Publication Styles */
+        .publication-abstract-mobile {
+            display: none;
+        }
+
+        .publication-abstract-full {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .publication-abstract-full.expanded {
+            max-height: 2000px;
+        }
+
+        .read-more-pub {
+            display: none;
+            color: var(--accent-start);
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: var(--space-md);
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more-pub i {
+            transition: transform 0.3s ease;
+        }
+
+        .read-more-pub.expanded i {
+            transform: rotate(180deg);
+        }
+
         /* ============================================
            DAS MEDHUB SECTION
            ============================================ */
@@ -1582,6 +1601,12 @@
             resize: vertical;
         }
 
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+
         /* ============================================
            FOOTER
            ============================================ */
@@ -1845,6 +1870,103 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            /* Publication Mobile Styles */
+            .publication-abstract {
+                display: none;
+            }
+
+            .publication-abstract-mobile {
+                display: block;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: var(--space-md);
+            }
+
+            .publication-abstract-mobile p {
+                margin-bottom: var(--space-sm);
+            }
+
+            .publication-abstract-full {
+                display: block;
+                color: var(--text-secondary);
+                line-height: 1.8;
+            }
+
+            .read-more-pub {
+                display: inline-flex;
+            }
+
+            .publication-header {
+                flex-direction: column;
+            }
+
+            .publication-badge {
+                align-self: flex-start;
+            }
+
+            .publication-actions {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .publication-actions .btn {
+                flex: 1;
+            }
+
+            /* Contact Form Mobile */
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-wrapper {
+                padding: var(--space-lg);
+            }
+
+            .contact-grid {
+                gap: var(--space-xl);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--space-md);
+            }
+
+            .section {
+                padding: var(--space-2xl) 0;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+
+            .floating-card {
+                display: none;
+            }
+
+            .publication-card {
+                padding: var(--space-lg);
+            }
+
+            .publication-title {
+                font-size: 1.25rem;
+            }
+
+            .das-stats-float {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-icon {
+                margin: 0 auto;
+            }
         }
 
         /* Reduced Motion */
@@ -1947,7 +2069,6 @@
                 
                 <div class="hero-visual">
                     <div class="profile-frame">
-                        <div class="profile-decoration"></div>
                         <img src="images/Divine1-removebg-preview (1).png" alt="Divine Sebukpor" class="profile-image">
                         <div class="profile-dots"></div>
                         
@@ -2225,7 +2346,7 @@
                         <img src="images/ldc.png" alt="Multi-Cancer Detection">
                         <span class="project-category">Medical Imaging</span>
                         <div class="project-overlay">
-                            <a href="https://platform.dasmedhub.com/" class="btn btn-primary btn-sm">View Project</a>
+                            <a href="https://platform.dasmedhub.com/ " class="btn btn-primary btn-sm">View Project</a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -2248,7 +2369,7 @@
                         <p class="project-description">
                             Advanced deep learning model identifying 26 cancer types from histopathological and cytological images with 99.85% accuracy.
                         </p>
-                        <a href="https://platform.dasmedhub.com/" class="project-link">
+                        <a href="https://platform.dasmedhub.com/ " class="project-link">
                             View Project <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -2260,7 +2381,7 @@
                         <img src="images/R.jpeg" alt="Diabetes Prediction">
                         <span class="project-category">Diagnostics</span>
                         <div class="project-overlay">
-                            <a href="https://models.dasmedhub.com/" class="btn btn-primary btn-sm">View Project</a>
+                            <a href="https://models.dasmedhub.com/ " class="btn btn-primary btn-sm">View Project</a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -2283,7 +2404,7 @@
                         <p class="project-description">
                             Advanced AI analyzing patient medical data to predict diabetes risk, enabling early intervention and prevention strategies.
                         </p>
-                        <a href="https://models.dasmedhub.com/" class="project-link">
+                        <a href="https://models.dasmedhub.com/ " class="project-link">
                             View Project <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -2295,7 +2416,7 @@
                         <img src="images/OIP (1).jpeg" alt="Chest Abnormality Detection">
                         <span class="project-category">Medical Imaging</span>
                         <div class="project-overlay">
-                            <a href="https://platform.dasmedhub.com/" class="btn btn-primary btn-sm">View Project</a>
+                            <a href="https://platform.dasmedhub.com/ " class="btn btn-primary btn-sm">View Project</a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -2318,7 +2439,7 @@
                         <p class="project-description">
                             CNN analyzing chest X-rays to identify 14 different abnormalities with high precision, reducing diagnostic time.
                         </p>
-                        <a href="https://platform.dasmedhub.com/" class="project-link">
+                        <a href="https://platform.dasmedhub.com/ " class="project-link">
                             View Project <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -2330,7 +2451,7 @@
                         <img src="images/R (1).jpeg" alt="Malaria Detection">
                         <span class="project-category">Medical Imaging</span>
                         <div class="project-overlay">
-                            <a href="https://models.dasmedhub.com/" class="btn btn-primary btn-sm">View Project</a>
+                            <a href="https://models.dasmedhub.com/ " class="btn btn-primary btn-sm">View Project</a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -2353,7 +2474,7 @@
                         <p class="project-description">
                             Deep learning model analyzing blood smear images to detect malaria parasites, providing rapid diagnosis in resource-limited settings.
                         </p>
-                        <a href="https://models.dasmedhub.com/" class="project-link">
+                        <a href="https://models.dasmedhub.com/ " class="project-link">
                             View Project <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -2365,7 +2486,7 @@
                         <img src="images/microbiome.jpg" alt="BioTrace Microbiome">
                         <span class="project-category">Diagnostics</span>
                         <div class="project-overlay">
-                            <a href="https://platform.dasmedhub.com/" class="btn btn-primary btn-sm">View Project</a>
+                            <a href="https://platform.dasmedhub.com/ " class="btn btn-primary btn-sm">View Project</a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -2388,7 +2509,7 @@
                         <p class="project-description">
                             Neural network predicting body site origin of microbiome samples with FastQ file upload support and manual feature entry.
                         </p>
-                        <a href="https://platform.dasmedhub.com/" class="project-link">
+                        <a href="https://platform.dasmedhub.com/ " class="project-link">
                             View Project <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -2400,7 +2521,7 @@
                         <img src="images/image-removebg-preview.png" alt="Rose Symptoms Assessment">
                         <span class="project-category">NLP Assistant</span>
                         <div class="project-overlay">
-                            <a href="https://platform.dasmedhub.com/" class="btn btn-primary btn-sm">View Project</a>
+                            <a href="https://platform.dasmedhub.com/ " class="btn btn-primary btn-sm">View Project</a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -2423,7 +2544,7 @@
                         <p class="project-description">
                             AI-powered virtual assistant helping users assess symptoms, receive preliminary health guidance, and make informed decisions.
                         </p>
-                        <a href="https://platform.dasmedhub.com/" class="project-link">
+                        <a href="https://platform.dasmedhub.com/ " class="project-link">
                             View Project <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -2454,6 +2575,7 @@
                     </div>
                 </div>
                 
+                <!-- Desktop Abstract -->
                 <div class="publication-abstract">
                     <p><strong>Background:</strong> Early and accurate cancer detection remains a critical challenge in global healthcare. Deep learning has shown strong diagnostic potential, yet widespread adoption is limited by dependence on high-performance hardware, centralized servers, and data-privacy risks.</p>
                     
@@ -2463,11 +2585,31 @@
                     
                     <p><strong>Conclusions:</strong> This work represents the first fully browser-deployable, privacy-preserving deep learning framework for multi-cancer diagnosis, demonstrating that high-accuracy AI can be achieved without infrastructure overhead.</p>
                 </div>
+
+                <!-- Mobile Abstract Summary -->
+                <div class="publication-abstract-mobile">
+                    <p><strong>Background:</strong> Early and accurate cancer detection remains a critical challenge in global healthcare...</p>
+                </div>
+
+                <!-- Mobile Full Abstract (Hidden by default) -->
+                <div class="publication-abstract-full" id="pubAbstractFull">
+                    <p><strong>Background:</strong> Early and accurate cancer detection remains a critical challenge in global healthcare. Deep learning has shown strong diagnostic potential, yet widespread adoption is limited by dependence on high-performance hardware, centralized servers, and data-privacy risks.</p>
+                    
+                    <p><strong>Methods:</strong> This study introduces a browser-based multi-cancer classification framework that performs real-time, client-side inference using TensorFlow.js—eliminating the need for external servers or specialized GPUs. The proposed model fine-tunes the Xception architecture, leveraging depthwise separable convolutions for efficient feature extraction, on a large multi-cancer dataset of over 130,000 histopathological and cytological images spanning 26 cancer types.</p>
+                    
+                    <p><strong>Results:</strong> The model achieved a <strong>Top-1 accuracy of 99.85%</strong> and <strong>Top-5 accuracy of 100%</strong>, surpassing all comparators while maintaining lightweight computational requirements. Grad-CAM visualizations confirmed that predictions were guided by histopathologically relevant regions, reinforcing interpretability and clinical trust.</p>
+                    
+                    <p><strong>Conclusions:</strong> This work represents the first fully browser-deployable, privacy-preserving deep learning framework for multi-cancer diagnosis, demonstrating that high-accuracy AI can be achieved without infrastructure overhead.</p>
+                </div>
+
+                <span class="read-more-pub" onclick="togglePublicationAbstract(this)">
+                    Read full abstract <i class="fas fa-chevron-down"></i>
+                </span>
                 
                 <div class="publication-footer">
                     <span class="publication-doi">DOI: 10.3390/diagnostics15233066</span>
                     <div class="publication-actions">
-                        <a href="https://doi.org/10.3390/diagnostics15233066" target="_blank" class="btn btn-primary btn-sm">
+                        <a href="https://doi.org/10.3390/diagnostics15233066 " target="_blank" class="btn btn-primary btn-sm">
                             <i class="fas fa-external-link-alt"></i> View Paper
                         </a>
                         <button class="btn btn-secondary btn-sm" onclick="copyDOI()">
@@ -2545,7 +2687,7 @@
                         </div>
                     </div>
                     
-                    <a href="http://www.dasmedhub.com/" target="_blank" class="btn btn-primary">
+                    <a href="http://www.dasmedhub.com/ " target="_blank" class="btn btn-primary">
                         <i class="fas fa-rocket"></i>
                         Visit DAS MedHub
                     </a>
@@ -2609,8 +2751,8 @@
                 </div>
                 
                 <div class="contact-form-wrapper">
-                    <form id="contactForm" action="https://formspree.io/f/xgvavbap" method="POST">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                    <form id="contactForm" action="https://formspree.io/f/xgvavbap " method="POST">
+                        <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" for="name">Your Name</label>
                                 <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
@@ -2651,16 +2793,16 @@
                         Innovating healthcare through artificial intelligence to create accessible, accurate, and affordable diagnostic solutions for everyone.
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/" class="social-link" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/divine-sebukpor-344a19227/ " class="social-link" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://github.com/Sebukpor" class="social-link" aria-label="GitHub">
+                        <a href="https://github.com/Sebukpor " class="social-link" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://x.com/sebukpor" class="social-link" aria-label="Twitter">
+                        <a href="https://x.com/sebukpor " class="social-link" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://www.instagram.com/sebukpor_10/" class="social-link" aria-label="Instagram">
+                        <a href="https://www.instagram.com/sebukpor_10/ " class="social-link" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -2680,8 +2822,8 @@
                     <h4 class="footer-title">Resources</h4>
                     <ul class="footer-links">
                         <li><a href="#das" class="footer-link">DAS MedHub</a></li>
-                        <li><a href="http://www.dasmedhub.com/" class="footer-link" target="_blank">Platform</a></li>
-                        <li><a href="https://models.dasmedhub.com/" class="footer-link" target="_blank">Models</a></li>
+                        <li><a href="http://www.dasmedhub.com/ " class="footer-link" target="_blank">Platform</a></li>
+                        <li><a href="https://models.dasmedhub.com/ " class="footer-link" target="_blank">Models</a></li>
                         <li><a href="#contact" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
@@ -2807,6 +2949,19 @@
                 btn.innerHTML = 'Show less <i class="fas fa-chevron-up"></i>';
             } else {
                 btn.innerHTML = 'Read more <i class="fas fa-chevron-down"></i>';
+            }
+        }
+
+        // Publication Abstract Toggle
+        function togglePublicationAbstract(btn) {
+            const fullAbstract = document.getElementById('pubAbstractFull');
+            fullAbstract.classList.toggle('expanded');
+            btn.classList.toggle('expanded');
+            
+            if (fullAbstract.classList.contains('expanded')) {
+                btn.innerHTML = 'Show less <i class="fas fa-chevron-up"></i>';
+            } else {
+                btn.innerHTML = 'Read full abstract <i class="fas fa-chevron-down"></i>';
             }
         }
 
